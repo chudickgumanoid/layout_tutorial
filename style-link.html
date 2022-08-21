@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-ссылки</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-ссылки</h2>
+	<div class="about-content">
+	<h4>Содержание:</h4>
+	<ol>
+		<li><a href="">Псевдоклассы состояний гипертекстовых ссылок</a></li>
+		<li><a href="">Выборка отдельных ссылок</a></li>
+		<li><a href="">Подчеркивание ссылок</a></li>
+		<li><a href="">Изображения для ссылок</a></li>
+		<li><a href="">Использование фонового изображения</a></li>
+		<li><a href="">Ссылки-кнопки</a></li>
+		<li><a href="">Оформления ссылок</a></li>
+	</ol></div><br>
+	<p><b>CSS-ссылки</b> содержат свойства, которые отвечают за внешний вид гипертекстовых ссылок HTML-документа. Ссылки представляют собой основной способ навигации по сайту, поэтому применение CSS-стилей для оформления улучшит их визуальное восприятие.</p>
+	<p>Основной способ оформления ссылок заключается в стилизации подчеркивания ссылки и изменении цвета текста ссылки. Также можно изменить внешний вид курсора с помощью свойства cursor.</p>
+		<h3>Псевдоклассы состояний гипертекстовых ссылок</h3>
+	<p>Большинство браузеров выделяют четыре основных состояния гиперссылок, каждому из которых соответствует свой псевдокласс селектора:</p>
+	<p><b>Не посещенная</b> — a:link<br>
+	   <b>Посещенная</b> — по которой уже выполнялся переход — a:visited<br>
+	   <b>Не нажатая</b> — над которой находится указатель мыши — a:hover<br>
+	   <b>Нажатая</b> — которая удерживается мышью — a:active</p>
+	<p>Используя псевдоклассы для форматирования каждого состояния ссылок, можно дать пользователям подсказки, по каким ссылкам он уже переходил, а по каким — ещё нет, например:</p>
+	<div class="code"><p><code>
+		a:link {<br>
+  				color: #497DDD; <br>
+ 				border-bottom: 1px dashed; <br>
+		}<br>
+		a:visited {<br>
+  				color: #EF7D55;<br>
+		}<br>
+		a:hover {<br>
+  				color: #154088; <br>
+ 				 border-bottom: .07em solid;<br>
+		}<br>
+		a:active {<br>
+  				color: #497DDD; <br>
+  				border-bottom: 1px dashed;<br>
+		}<br>
+	</code></p></div>
+	<p>Форматировать ссылки нужно в указанной последовательности, в противном случае состояние стилей перестанет работать (в силу механизма каскадности).</p>
+		<h3>Выборка отдельных ссылок</h3>
+	<p>Для стилизации отдельных ссылок нужно задать им стилевой класс, после чего можно будет менять внешний вид выбранных ссылок:</p>
+	<div class="code"><p><code>
+		<а href="http://kptk.kz" class="kptk">какой-то текст</a>
+	</code></p></div>
+		<h3>Подчеркивание ссылок</h3>
+	<p>Удаление подчеркивания:</p>
+	<div class="code"><p><code>
+		a {text-decoration: none;}
+	</code></p></div>
+	<p>Добавление подчеркивания только при наведении на ссылку:</p>
+	<div class="code"><p><code>
+		a {text-decoration: none;}<br>
+		a:hover {text-decoration: underline;}
+	</code></p></div>
+	<p>Внешний вид нижней границы ссылки:</p>
+	<div class="code"><p><code>
+		a {<br>
+  			text-decoration: none;<br>
+  			border-bottom: 2px dashed DarkOrchid;<br>
+  			padding-bottom: 3px;<br>
+		}
+	</code></p></div>
+		<h3>Изображения для ссылок</h3>
+	<p>Добавить изображение для ссылки можно с помощью CSS-свойства background-image. Так как элемент <а> является строчным a {display: inline;}, то предварительно его нужно преобразовать в блочный элемент a {display: block;}.</p>
+	<p>Чтобы вставить изображение или иконку перед ссылкой, необходимо добавить отступ с помощью свойства padding-left. Этот прием может пригодиться в случае, когда на странице есть ссылки для загрузки каких-либо документов различных форматов, и вы можете добавить значок-изображение типа файла для большей наглядности.</p>
+	<p>Если нужно, чтобы значок автоматически добавился ко всем ссылкам, содержащим документы одного формата, можно воспользоваться следующей конструкцией:</p>
+	<div class="code"><p><code>
+		a[href$=".pdf"] {background-image: url(images/pdf.png);}
+	</code></p></div>
+	<p>Символ href$ в селекторе атрибута дает браузеру команду найти все атрибуты href, заканчивающиеся определенным образом (в данном случае .pdf) и добавить к ссылке соответствующий значок.</p>
+		<h3>Использование фонового изображения</h3>
+	<p>Можно преобразовать внешний вид ссылки, добавив в качестве нижней границы фоновое изображение:</p>
+	<div class="code"><p><code>
+		a {<br>
+  			text-decoration: none;<br>
+  			background: url(images/underline.png) repeat-x left bottom;<br>
+  			padding-bottom: 3px;<br>
+		}
+	</code></p></div>
+		<h3>Ссылки-кнопки</h3>
+	<p>Благодаря свойствам background-color, border и padding, ссылкам можно придать вид прямоугольных кнопок, а, меняя отображение тех или иных свойств ссылок при наведении курсора мыши a:hover, добавить интересные эффекты.</p>
+	<img src="img/css/buttons-design.png" alt="">
+		<h3>Оформления ссылок</h3>
+	<p>Гипертекстовые ссылки можно оформить различными способами, но основной прием оформления основывается на изменении внешнего вида ссылки при наведении на нее курсором мыши — состояние ссылки a:hover.</p>
+	<img src="img/css/styling-links.png" alt="">
+
+	<div class="container-btn">
+                      <a href="style-font.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-table.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

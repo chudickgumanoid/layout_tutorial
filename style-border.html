@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-рамка</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-рамка</h2>
+	<div class="about-content">
+	<h4>Содержание:</h4>
+	<ol>
+		<li><a href="">Стиль рамки border-style</a></li>
+		<li><a href="">Цвет рамки border-color</a></li>
+		<li><a href="">Ширина рамки border-width</a></li>
+		<li><a href="">Задание рамки одним свойством</a></li>
+		<li><a href="">Задание рамки для одной границы элемента</a></li>
+	</ol></div>
+		<h3>Стиль рамки border-style</h3>
+	<img src="img/css/border_style.png" style="float: left;" alt="">
+	<p>По умолчанию рамки всегда отрисовываются поверх фона элемента, фон распространяется до внешнего края элемента. Стиль рамки определяет ее отображение, без этого свойства рамки не будут видны вообще. Для элемента можно задавать рамку для всех сторон одновременно с помощью свойства border-style или для каждой стороны отдельно с помощью уточняющих свойств border-top-style и т.д. Не наследуется.</p>
+		<h3>Цвет рамки border-color</h3>
+	<p>Свойство задаёт цвет рамок всех сторон одновременно. С помощью уточняющих свойств можно установить свой цвет для рамки каждой стороны элемента. Если для рамки цвет не задан, то он будет таким же, как и цвет текста элемента. Если в элементе нет текста, то цвет рамки будет таким же, как и цвет текста родительского элемента. Не наследуется.</p>
+	<table class="tb">
+		<tr>
+			<th colspan="2" align="center">border-color</th>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">(border-top-color, border-right-color, border-bottom-color, border-left-color)</td>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>transparent</td>
+			<td>Устанавливает прозрачный цвет для рамки. При этом ширина рамки остается. Можно использовать для смены цвета рамки при наведении курсора мыши на элемент, чтобы избежать смещение элемента.</td>
+		</tr>
+		<tr>
+			<td>цвет</td>
+			<td>Цвет рамок задается при помощи значений свойства color.</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>{border-color: #cacd58;}</td>
+		</tr>
+		<tr>
+			<td>{1,4}</td>
+			<td>Одновременное перечисление четырех разных цветов для рамок элемента, только для свойства</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>border-color: {border-color: #cacd58 #5faf8a #b9cea5 #aab238;}</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">p</span>{border-color: #cacd58;}</p></div>
+		<h3>Ширина рамки border-width</h3>
+	<p>Ширина рамки задается с помощью единиц измерения длины или ключевых слов. Если для свойства border-style задано значение none, и для рамки элемента установлена какая-то ширина, то в данном случае ширина рамки приравнивается к нулю. Не наследуется.</p>
+	<table class="tb">
+		<tr>
+			<th colspan="2" align="center">border-width</th>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">(border-top-width, border-right-width, border-bottom-width, border-left-width)</td>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>thin / medium / thick</td>
+			<td>Ключевые слова, устанавливают ширину рамки относительно друг друга. Первое значение уже, чем второе, второе — тоньше третьего. Значение по умолчанию — medium</td>
+		</tr>
+		<tr>
+			<td>цвет</td>
+			<td>Цвет рамок задается при помощи значений свойства color.</td>
+		</tr>
+		<tr>
+			<td>width (px, em)</td>
+			<td>{border-width: 5px;}</td>
+		</tr>
+		<tr>
+			<td>{1,4}</td>
+			<td>Возможность одновременного задания четырех разных ширин для рамок элемента, только для свойства</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>border-width:
+{border-width: 5px 10px 15px 3px;}</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">p</span>{border-width: 2px;}</p></div>
+		<h3>Задание рамки одним свойством</h3>
+	<p>Свойство border позволяет объединить в себе следующие свойства: border-width, border-style, border-color, например:</p>
+	<div class="code"><p><code>
+		div {<br>
+			width: 100px; <br>
+			height: 100px; <br>
+			border: 2px solid grey;<br>
+			}
+	</code></p></div>
+	<p>При этом заданные свойства будут применяться ко всем границам элемента одновременно. Если какое-то из значений не указано, его место займет значение по умолчанию.</p>
+		<h3>Задание рамки для одной границы элемента</h3>
+	<p>В случае, когда необходимо задать разный стиль границ элемента, можно воспользоваться краткой записью для соответствующей границы. <br> Перечисленные ниже свойства объединяют в одно объявление следующие свойства: border-width, border-style и border-color. Перечень свойств указывается в заданном порядке, при этом одно или два значения могут быть пропущены, в этом случае их значения примут значения по умолчанию. <br> Стиль верхней границы задается с помощью свойства border-top, нижней — border-bottom, левой — border-left, правой — border-right.</p>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">p</span>{border-top: 2px solid grey;}</p></div>
+	<div class="container-btn">
+                      <a href="style-background.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-content.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

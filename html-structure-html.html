@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Структура HTML документа</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-adaptive.css">
+    <link rel="stylesheet" href="css/font/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+            </div>
+        
+        
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+        </header>
+    
+
+        <main class="html-lesson">
+            <div class="html-bg">
+                <div class="html-main">
+                    <h2>Структура HTML страницы</h2>
+                    <p>Если открыть любую веб-страницу, то она будет содержать в себе типичные элементы, которые не меняются от вида и направленности сайта. </p><br>
+                    <p>Самая простая структура страницы выглядит вот так:</p><br>
+
+                     <div class="code">
+                         <p><code>
+                            &lt;!DOCTYPE html&gt; <br>
+                            &lt;html lang="en"&gt; <br>
+                            &lt;head&gt; <br>
+                            &#12288; &lt;meta charset="UTF-8"&gt;<br>
+                            &#12288; &lt;title&gt;Document&lt;/title&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &#12288; &lt;h1&gt;Lorem ipsum dolor sit amet.&lt;/h1&gt;<br>
+                            &#12288; &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>&#12288; &#12288; Ratione, soluta.&lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </code></p>
+                    </div>
+                    <p>Результат данного кода:</p>
+                    <img src="img/html-lesson/21.jpg" alt=""><br><br>
+
+                    <h4>Тег &lt;html&gt; &lt;/html&gt;</h4>
+                    <p>Между этими тегами заключается всё содержимое html страницы. </p><br>
+
+                    <h4>&lt;head&gt; &lt;/head&gt;</h4>
+                    <p>За открывающим тегом html следует заголовок документа, который определяется открывающими и закрывающими тегами head.</p
+                    ><br>
+
+                    <p>Данный заголовок содержит все не визуальные элементы страницы, которые управляют этой страницей. То есть в теге &lt;head&gt; &lt;/head&gt; находится название вашей страницы, подключенные стили css и js, так же шрифты и параметры meta-данных.</p><br><br>
+
+                    <h4>&lt;body&gt; &lt;/body&gt;</h4>
+                    <p>После тега заголовка head следует тег тела страницы - body. В теге body заключаются все элементы, отвечающие за визуальное оформление документа.</p><br>
+
+                    <p>Заголовки, текста, параграфы, ссылки, изображения, блоки и многое другое всего лишь часть того, что может быть размещено в теге body.</p><br>
+
+                    <p>В итоге получается вот такая структура HTML документа:</p>
+
+                    <div class="code">
+                         <p><code>
+                            &lt;html&gt; <br>
+                            &lt;head&gt; <br>
+                            &lt;/head&gt;<br>
+                            &#12288;&lt;body&gt;<br>
+                            &#12288;&lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </code></p>
+                    </div>
+
+
+                    <div class="container-btn">
+                      <a href="html-main-elements.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                    
+
+                      <a href="html-paragraph.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    <footer>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="glossrary.html">Глоссарий</a>
+            <a href="task.html">Задания</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+        </div>
+        <div class="social">
+            <a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+            <a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+            <a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+            <a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+        </div><br><br>
+        <p>КГУ Карагандинский профессионально технический колледж</p>
+        <p>Руководитель: Абдрахманова Светлана Владимировна</p>
+        <p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+    </footer>
+	<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script> 
+</body>
+</html>

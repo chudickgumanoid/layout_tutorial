@@ -1,0 +1,1341 @@
+/*  импорт шрифта*/
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+*{
+    margin: 0;/*  обнуление внешних отступов*/
+    padding: 0;/* внутренних отступов */
+}
+a{
+    text-decoration: none;/* без подчеркивания у ссыллок */
+}
+li{
+    list-style: none;/* списки идут без маркеров */
+
+    text-decoration: none;/* подчеркивания, выделения нет */
+}
+html,
+body{
+    overflow-x: hidden;/* прокрутка по оси Х отсутствует */
+
+    height: 100%;/* высота страницы 100% */
+}
+body{
+    font-family: 'Arimo', sans-serif;/* прописывается семейство шрифтов */
+
+    display: flex;/* способность гибкого элемента растягиваться или сжиматься */
+    overflow: auto;/* Полосы прокрутки добавляются только при необходимости. */
+    flex-direction: column;/*  по главной оси и направлению */
+
+    box-sizing: border-box;/* изменения алгоритма расчета ширины и высоты элемента */
+}
+/* прибитие футера к низу страницы, если не достаточно контента */
+.html-lesson,
+.glossary,
+header,
+footer{
+    box-sizing: border-box;/* изменения алгоритма расчета ширины и высоты элемента */
+    width: 100%;/* ширина трёх элементов равна 100% */
+}
+.html-lesson,
+.glossary{
+    flex-grow: 1;/* определяет, сколько пространства может занимать флекс внутри контейнера */
+}
+
+
+
+
+
+
+
+/* --------------------------------------
+-----------------------------------------
+        шапка и навигация по сайту
+---------------------------------------*/
+header {
+  display: flex;
+  flex-wrap: wrap; /*перенос строки */
+  justify-content: center; /*прижимает содержимое к краям */
+  align-items: center; /*выравнивает элементы по центру на вертикальной */
+}
+.logo{
+    display: flex;
+
+    width: 100%;/* ширина */
+    margin: 0 auto;/* центрирование элемента */
+
+    background: #000;/* фон */
+
+    object-fit: cover;/* как элемент вроде img подстраивается под доступные ширину и высоту своего содержимого */
+    justify-content: space-evenly;/* Равномерно распределяет все элементы по ширине flex-блока. Все элементы имеют равное пространство вокруг */
+    align-items: stretch;/* Флексы растягиваются таким образом, чтобы занять всё доступное пространство контейнера. */
+}
+
+.graficlogo{
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 150px;/* высота */
+}
+
+header .menu ul {
+  display: flex;
+  list-style: none;
+}
+
+
+header .menu ul a {
+    font-size: 16px;
+    font-weight: 700;
+
+    position: relative;
+    margin-top: -20px;
+
+    display: inline-block;/* блочно-строчный элемент */
+
+    padding: 14px 16px;/* внутренние отступы */
+
+    text-align: left;/* положение текста по центру */
+    text-decoration: none;/* без оформления */
+    text-transform: uppercase;/* текст заглавными буквами */
+
+    color: #000;
+}
+header .menu ul a:after{
+    position: absolute;/* абсолютная позиция */
+    bottom: 0;/* снизу */
+    left: 0;/* слева */
+
+    visibility: hidden;/* Элемент становится невидимым */
+
+    width: 100%;
+    height: 3px;
+
+    content: '';
+    transition: all .3s ease;/* плавность для нажатия */
+    transform: scaleY(0);
+
+    background-color: #f5a742;
+}
+header .menu ul a:hover{
+    text-decoration: none;
+
+    color: #000;
+}
+header .menu ul a:hover:after{
+    visibility: visible;
+
+    transform: scaleY(1);/* увеличение по оси Х */
+}
+
+
+/* --------------------------------------
+-----------------------------------------
+                настоящий поиск
+-----------------------------------------
+---------------------------------------*/
+div.searchable{
+    width: 300px;
+}
+.searchable input{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    color: #495057;
+    border: 0 solid transparent;
+    border-bottom: 1px solid #dbdbdb;
+    border-radius: .25rem;
+    outline: none;
+    background: url(../img/search.png) no-repeat right;
+    background-color: transparent;
+    background-position: 260px;
+    background-clip: padding-box;
+    background-size: 30px;
+}
+.searchable ul{
+    display: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    max-height: 120px;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    border: 1px solid #add8e6;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #dbdbdb;
+}
+.searchable ul li{
+    padding: 7px 9px;
+
+    cursor: pointer;
+
+    color: #6e6e6e;
+    border-bottom: 2px solid #efefef;
+}
+.searchable ul li a{
+    text-decoration: none;
+
+    color: #000;
+}
+.searchable ul li.selected{
+    color: #333;
+    background-color: #e8e8e8;
+}
+
+
+/* --------------------------------------
+-----------------------------------------
+            главный экран
+-----------------------------------------
+---------------------------------------*/
+.top-slide{
+    position: relative;
+
+    max-width: 100%;
+    min-height: 55vh;
+    padding-top: 200px;
+
+    background: url(../img/slider/14.jpg) no-repeat center;
+    background-size: cover;
+}
+.top-container{
+    width: 85%;
+    margin: 0 auto;
+}
+.top-slide h2{
+    font-size: 70px;
+    line-height: 1.3;
+
+    display: inline;
+
+    padding: 0 20px;
+
+    text-transform: uppercase;
+
+    background: #f5a742;
+}
+.top-slide:nth-child(2){
+    margin-bottom: 10px;
+}
+.top-slide p{
+    font-size: 24px;
+    line-height: 1.2;
+
+    display: inline;
+
+    padding: 0 20px;
+
+    color: #fff;
+    background: #414146;
+}
+.mw{
+    position: relative;
+
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+/* --------------------------------------
+            Cодержание
+---------------------------------------*/
+.content-shell{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    -ms-align-items: center;
+    align-items: center;
+    margin: 0 auto;
+
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.content-list ul li{
+    list-style-type: circle;
+    color: #000;
+}
+.content-list ul li a{
+    color: #000;
+    font-weight: 500;
+}
+.content-list ul li a:hover{
+    color: #f5a742;
+    transition: .3s;
+}
+.content-list ul li a:visited{
+    color: #5b62c9;
+}
+.list-name{
+    font-size: 24px;
+}
+.list-title{
+    margin-left: -5rem;
+    font-size: 18px;
+}
+.list-bias{
+    margin-left: 60px;
+}
+/* --------------------------------------
+    стилизация "разговорных блоков"
+---------------------------------------*/
+.dialogue-with-you,
+.inv{
+    display: -webkit-flex;
+    display:    -moz-flex;
+    display:     -ms-flex;
+    display:      -o-flex;
+    display:         flex;
+
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+    flex-basis: 60%;
+}
+.dialogue-with-you img{
+    max-width: 100%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.dialogue-text{
+    width: 30%;
+
+    text-align: left;
+}
+.dialogue-text h2{
+    font-size: 45px;
+}
+.dialogue-text p{
+    font-size: 20px;
+}
+.dialogue-text h3{
+    font-size: 30px;
+}
+.inv{
+    width: 100%;
+
+    background-color: #efefef;
+}
+
+
+
+.task-container{
+    width: 100%;
+    margin-top: 40px;
+}
+.task-container img{
+    height: 60%;
+}
+/* --------------------------------------
+        кнопка для задания
+---------------------------------------*/
+.download{
+    font-size: 18px;
+
+    width: 95%;
+    height: 70px;
+
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5a730;
+}
+.download a{
+    font-size: 18px;
+
+    text-decoration: none;
+
+    color: #000;
+}
+.download:focus,
+.download:hover{
+    background-color: rgba(240, 172, 0, 1);
+}
+
+
+.test-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px 0 40px 0;
+}
+.passing-test{
+    font-size: 18px;
+
+    width: 30%;
+    height: 70px;
+    margin: 0 auto;
+
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5a730;
+}
+.passing-test a{
+    font-size: 18px;
+
+    text-decoration: none;
+    outline: none;
+
+    color: #000;
+}
+.passing-test a:hover{
+    border-bottom: none;
+    color: #000;
+}
+.passing-test:focus,
+.passing-test:hover{
+    background-color: rgba(240, 172, 0, 1);
+    transition: .3s;
+}
+/* --------------------------------------
+-----------------------------------------
+        введение в html
+-----------------------------------------
+---------------------------------------*/
+.about-html{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: left;
+}
+.about-html img{
+    max-width: 100%;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+
+    object-fit: cover;
+}
+.about-html h2{
+    margin-bottom: 10px;
+}
+.about-html ul li{
+    margin-left: 25px;
+
+    list-style-type: disc;
+}
+.about-html ol li{
+    margin-left: 25px;
+
+    list-style-type: decimal;
+}
+
+/* --------------------------------------
+-----------------------------------------
+-----------------------------------------
+            РАЗДЕЛ С Тестами
+-----------------------------------------
+-----------------------------------------
+---------------------------------------*/
+.container{
+    font-weight: 100;
+
+    width: 50rem;
+    margin: 48px auto;
+
+    border-radius: 5px;
+    background: #fafafa;
+    box-shadow: rgba(0,0,0,.2) 0 4px 2px -2px;
+}
+.container a:hover{
+    color: #ff4d4d;
+    border-color: #ff4d4d;
+}
+.blog-cover{
+    height: 30rem;
+
+    border-radius: 5px 5px 0 0;
+    box-shadow: inset rgba(0,0,0,.2) 0 64px 64px 16px;
+}
+.blog-body{
+    width: 80%;
+    margin: 0 auto;
+}
+.blog-title h1 a{
+    font-weight: 100;
+
+    color: #333;
+}
+.blog-text p{
+    color: #4d4d4d;
+}
+.html{
+    background: url(../img/task/html-bg.jpg);
+    background-size: cover;
+}
+.css{
+    background: url(../img/task/css-bg.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+/* --------------------------------------
+-----------------------------------------
+            КАРТА В CONTACT
+-----------------------------------------
+---------------------------------------*/
+.contact h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
+
+#map{
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+}
+/* --------------------------------------
+-----------------------------------------
+        ФОРМА ОБРАТНОЙ СВЯЗИ
+-----------------------------------------
+---------------------------------------*/
+.form{
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 32px;
+
+    letter-spacing: 1px;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.form_input,
+.form_button{
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+.form_title{
+    font-weight: normal;
+
+    padding-bottom: 20px;
+
+    text-align: center;
+}
+.form_group{
+    position: relative;
+
+    margin-bottom: 32px;
+}
+.form_label{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    transition: .3s;
+
+    color: #9e9e9e;
+}
+.form_input{
+    width: 100%;
+    padding: 0 0 10px 0;
+
+    transition: .3s;
+
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline: none;
+    background-color: transparent;
+}
+.form_input:focus{
+    border-bottom: 1px solid #f5a742;
+}
+.form_button{
+    padding: 10px 20px;
+
+    cursor: pointer;
+    transition: .3s;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f5a730;
+}
+.form_button:focus,
+.form_button:hover{
+    background-color: rgba(240, 172, 0, 1);
+}
+.form_input:focus ~ .form_label{
+    font-size: 12px;
+
+    top: -18px;
+
+    color: #e0e0e0;
+}
+
+
+/* --------------------------------------
+-----------------------------------------
+            То который что то значит
+-----------------------------------------
+---------------------------------------*/
+.tb{
+    width: 60%;
+    height: auto;
+    margin: auto;
+
+    border: 1px solid #666;
+}
+.tb th{
+    font-size: 18px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px dashed #666;
+}
+.tb td{
+    font-size: 16px;
+
+    padding: 20px 20px 0 0;
+}
+.button-dead{
+    display: none;
+
+    width: 60%;
+    margin: 50px auto;
+}
+#button-dead{
+    width: 60%;
+    margin: 50px auto;
+}
+.button-sumbit{
+    font-size: 18px;/* размер текста*/
+    font-weight: 300;/* толщина текста*/
+    /* стилизация кнопки для отправки*/
+
+    width: 100%;/* ширина */
+    padding-top: 22px;/* отступ сверху*/
+    padding-bottom: 22px;/* отступ снизу*/
+
+    cursor: pointer;/* вид курсора при наведении*/
+    transition: all .3s;/* Устанавливает эффект перехода между двумя состояниями элемента*/
+    text-align: center;/* расположение текста по центру*/
+
+    color: #fff;/* цвет белый*/
+    border: 0 solid transparent;/* рамка*/
+    border-radius: 5px;
+    background-color: #000;/* цвет фона*/
+}
+.button-sumbit:hover{
+    color: #000;/* цвет текста*/
+    border: 1px solid #000;/* рамка*/
+    /* ховер эффект для кнопки*/
+    background-color: #fff;/* цвет фона*/
+}
+
+/* --------------------------------------
+    Таймер
+---------------------------------------*/
+.countdown{
+    font-size: 25px;
+    font-weight: 100;
+
+    display: inline-block;
+    float: right;
+
+    width: 25%;
+
+    text-align: center;
+
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.countdown-title{
+    font-size: 21px;
+    font-weight: 100;
+
+    margin: 10px 0 10px 0;
+
+    color: #000;
+}
+.countdown-number{
+    display: inline-block;
+
+    padding: 0;
+}
+.countdown-time{
+    display: inline-block;
+
+    padding: 0;
+}
+.deadline-message{
+    font-size: 24px;
+
+    display: none;
+}
+#deadline-message{
+    font-size: 25px;
+    font-weight: 100;
+
+    width: 25%;
+    margin: 50px auto 50px auto;
+
+    text-align: center;
+
+    color: #000;
+}
+.visible{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+
+
+/* --------------------------------------
+-----------------------------------------
+    раздел с основным меню
+-----------------------------------------
+---------------------------------------*/
+.menu{
+    display: -webkit-flex;
+    display:    -moz-flex;
+    display:     -ms-flex;
+    display:      -o-flex;
+    display:         flex;
+
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-h2{
+    top: 0;
+    left: 0;
+
+    display: flex;
+
+    width: 80%;
+    margin: 20px auto;
+
+    text-align: center;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.organ{
+    font-size: 20px;
+
+    display: flex;
+
+    width: 30%;
+    height: 30px;
+    margin: 14px 0 5px 0;
+    padding: 65px 10px;
+
+    text-align: center;
+
+    border: 5px outset #000;
+    border-radius: 5px;
+
+    justify-content: center;
+}
+.organ p a{
+    color: #000;
+}
+.organ p a:hover{
+    color: #f5a742;
+    transition: .3s;
+}
+
+/* --------------------------------------
+-----------------------------------------
+    СТИЛИЗАЦИЯ РАЗДЕЛА ПОДГОТОВКА
+-----------------------------------------
+---------------------------------------*/
+.organize{
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: left;
+}
+.organize img{
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    object-fit: cover;
+}
+.organize ul li{
+    margin-left: 40px;
+
+    list-style-type: disc;
+}
+.organize ol li{
+    margin-left: 40px;
+
+    list-style-type: decimal;
+}
+.organize  a{
+    color: #ff9000;
+}
+.organize a:hover{
+    color: #f5a742;
+}
+.organize ul li:first-letter{
+    font-size: 110%;
+}
+.organize ol li:first-letter{
+    font-size: 110%;
+}
+
+/* --------------------------------------
+-----------------------------------------
+    пытался сделать красивые секции
+            мб будут нужны
+    сейчас они на нескольких страницах
+-----------------------------------------
+---------------------------------------*/
+.organize-1{
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: left;
+}
+.organize-1 img{
+    max-width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+}
+.organize-1 ul li{
+    margin-left: 40px;
+
+    list-style-type: disc;
+}
+.organize-1 ol li{
+    margin-left: 40px;
+
+    list-style-type: decimal;
+}
+.organize-1 ul li:first-letter{
+    font-size: 110%;
+}
+.organize-1 ol li:first-letter{
+    font-size: 110%;
+}
+.organize-2{
+    width: 70%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: left;
+}
+.organize-2 img{
+    max-width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+}
+.organize-2 ul li{
+    margin-left: 40px;
+
+    list-style-type: disc;
+}
+.organize-2 ol li{
+    margin-left: 40px;
+
+    list-style-type: decimal;
+}
+
+.organize-2 ul li:first-letter{
+    font-size: 110%;
+}
+.organize-2 ol li:first-letter{
+    font-size: 110%;
+}
+.oraganize-mini{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: -90px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    text-align: left;
+}
+.oraganize-mini img{
+    max-width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+
+    object-fit: cover;
+}
+.oraganize-mini ul li{
+    margin-left: 40px;
+
+    list-style-type: disc;
+}
+.oraganize-mini ol li{
+    margin-left: 40px;
+
+    list-style-type: decimal;
+}
+.oraganize-mini ul li:first-letter{
+    font-size: 110%;
+}
+.oraganize-mini ol li:first-letter{
+    font-size: 110%;
+}
+
+
+/* --------------------------------------
+-----------------------------------------
+        картинки на фоне введения
+-----------------------------------------
+---------------------------------------*/
+.img-picture img{
+    max-width: 100%;
+    height: 120px;
+    margin-top: -150px;
+    margin-left: 2%;
+
+    transform: rotate(320deg);
+
+    object-fit: cover;
+}
+.img-picture-css img{
+    max-width: 100%;
+    height: 110px;
+    margin-top: -180px;
+    margin-left: 1%;
+
+    transform: rotate(290deg);
+
+    object-fit: cover;
+}
+.img-picture-js img{
+    max-width: 100%;
+    height: 90px;
+    margin-top: 0;
+    margin-left: 3%;
+
+    transform: rotate(30deg);
+
+    object-fit: cover;
+}
+
+/* --------------------------------------
+--------КНОПКА для чего?-----------------
+---------------------------------------*/
+.button-menu{
+    width: 60%;
+    margin: 50px auto;
+}
+
+/* --------------------------------------
+-----------------------------------------
+        оформление раздела с учебой
+-----------------------------------------
+---------------------------------------*/
+.html-bg{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    background-color: #ededed;
+}
+.css-bg{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    background-color: #ededed;
+}
+.html-main{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+
+    background: #fff;
+}
+.html-main img{
+    max-width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    margin-left: 70px;
+
+    object-fit: cover;
+}
+.html-main  h2{
+    font-size: 40px;
+    font-weight: 700;
+
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-top: 60px;
+
+    text-align: center;
+
+    color: #ff9000;
+}
+.html-main  h3{
+    font-size: 35px;
+
+    text-align: center;
+
+    color: #f5c242;
+}
+.html-main  h4{
+    font-size: 22px;
+
+    margin-left: 80px;
+}
+.html-prompt{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-align: center;
+
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+.html-main  p{
+    font-size: 16px;
+    line-height: 2;
+
+    margin-right: 70px;
+    margin-left: 70px;
+}
+.html-main ul li{
+    margin-left: 100px;
+
+    list-style-type: disc;
+}
+.html-main ol li{
+    margin-left: 100px;
+
+    list-style-type: decimal;
+}
+.html-main  a
+{
+    color: #ff9000;
+}
+.html-main a:hover{
+    color: #f5a742;
+}
+.html-main ul li:first-letter{
+    font-size: 110%;
+}
+.html-main ol li:first-letter{
+    font-size: 110%;
+}
+
+
+.tb{
+    width: 60%;
+    height: auto;
+    margin: auto;
+
+    border: 1px solid #666;
+}
+.tb th{
+    font-size: 18px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px dashed #666;
+}
+.tb td{
+    font-size: 16px;
+
+    padding: 20px 20px 0 0;
+}
+.code{
+    line-height: 1.5;
+
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    text-align: left;
+
+    background-color: #fff6d9;
+}
+
+/* --------------------------------------
+--------КНОПКА ДЛЯ ПЕРЕЛИСТЫВАНИЯ--------
+---------------------------------------*/
+.container-btn{
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+
+    justify-content: space-around;
+}
+.container-btn .next-btn{
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+
+    width: 230px;
+    height: 80px;
+
+    cursor: pointer;
+    transition: .5s;
+
+    border-radius: 5px;
+    outline: none;
+    background: none;
+}
+.container-btn .next-btn:hover{
+    font-size: 26px;
+
+    color: white;
+    border: none;
+}
+.lorange{
+    color: #fbc02d;
+    border: 2px solid #fbc02d;
+}
+.lorange:hover{
+    transition: all .3s ease-in-out;
+
+    background-color: #fbc02d;
+}
+
+
+
+
+
+.glossary-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.glossary-body{
+    margin-right: auto;
+    text-align: left;
+}
+.glossary-container h2{
+    font-size: 40px;
+    color: #5b62c9;
+    margin-bottom: 10px;
+}
+
+
+
+.blocknot{
+    width: 40%;
+    margin: auto auto 50px auto;
+    padding: 20px;
+}
+.blocknot h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#wrapper{
+    width: 100%;
+}
+#text_area{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    font-size: 18px;
+}
+#lists{
+    float: right;
+}
+#lists li{
+    font-size: 18px;
+    margin: 10px;
+}
+#lists li:hover{
+    font-weight: bold;
+}
+
+
+/* --------------------------------------
+-------стилизация футера-------
+---------------------------------------*/
+footer{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 25px;
+
+    text-align: center;
+
+    background: #000;
+}
+/* --------------------------------------
+            эффект для навигации
+---------------------------------------*/
+nav a{
+    font-size: 14px;
+    font-weight: 500;
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 12px 16px;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+nav a:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    visibility: hidden;
+
+    width: 100%;
+    height: 3px;
+
+    content: '';
+    -webkit-transition: all .1s ease;
+            transition: all .3s ease;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+
+    background-color: #f5a742;
+}
+
+nav a:hover:after{
+    visibility: visible;
+
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+}
+footer p{
+    color: #fff;
+}
+.footer-bottom{
+    margin-bottom: 20px;
+}
+.logo a img{
+    max-width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* --------------------------------------
+        ховер на футер иконки
+---------------------------------------*/
+.fa-youtube,
+.fa-facebook,
+.fa-vk,
+.fa-instagram,
+.fa-whatsapp{
+    color: #fff;
+}
+.fa-youtube:hover,
+.fa-facebook:hover,
+.fa-vk:hover,
+.fa-instagram:hover,
+.fa-whatsapp:hover{
+    transition: all 0.5s ease;
+
+    color: #fbc02d;
+}

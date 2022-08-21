@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-текст</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-текст</h2>
+	<div class="about-content">
+	<h4>Содержание:</h4>
+	<ol>
+		<li><a href="">Преобразование текста: свойство text-transform</a></li>
+		<li><a href="">Обработка пробелов и переносы строк: свойство white-space</a></li>
+		<li><a href="">Настройка табуляции: свойство tab-size</a></li>
+		<li><a href="">Разрыв строки и границы слов</a></li>
+		<li><a href="">Правила разрыва для букв: свойство word-break</a></li>
+		<li><a href="">Разрыв строки: line-break</a></li>
+		<li><a href="">Расстановка переносов: свойство hyphens</a></li>
+		<li><a href="">Переполнение блока-обертки: свойство overflow-wrap/word-wrap</a></li>
+		<li><a href="">Выравнивание и выключка строк</a></li>
+		<li><a href="">Краткая запись для выравнивания текста: свойство text-align</a></li>
+		<li><a href="">Выравнивание текста по умолчанию: свойство text-align-all</a></li>
+		<li><a href="">Выравнивание последней строки: свойство text-align-last</a></li>
+		<li><a href="">Промежутки</a></li>
+		<li><a href="">Трекинг: свойство letter-spacing</a></li>
+		<li><a href="">Отступ первой строки: свойство text-indent</a></li>
+	</ol></div>
+		<h3>Преобразование текста: свойство text-transform</h3>
+	<p>Свойство text-transform стилизует текст. Оно не влияет на базовое содержимое и не должно влиять на содержимое операции копирования и вставки простого текста.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">text-transform</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>none</td>
+				<td>Значение по умолчанию, означает отсутствие эффектов.</td>
+			</tr>
+			<tr>
+				<td>capitalize</td>
+				<td>Изменяет написание первой буквы каждого слова в элементе, делая её прописной.</td>
+			</tr>
+			<tr>
+				<td>uppercase</td>
+				<td>Выводит все слова в элементе прописными буквами.</td>
+			</tr>
+			<tr>
+				<td>lowercase</td>
+				<td>Выводит все слова в элементе строчными буквами.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">text-transform</span>: none;<br>
+			<span style="color: red">text-transform</span>: capitalize;<br>
+			<span style="color: red">text-transform</span>: uppercase;<br>
+			<span style="color: red">text-transform</span>: lowercase;<br>
+			<span style="color: red">text-transform</span>: inherit;<br>
+			<span style="color: red">text-transform</span>: initial;</code></p>
+		<h3>Обработка пробелов и переносы строк: свойство white-space</h3>
+	<p>Свойство white-space обрабатывает пробелы между словами и переносы строк внутри элемента.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">white-space</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>normal</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>nowrap</td>
+				<td>Запрещает переносы строк, за исключением применения &lt;br&gt;.</td>
+			</tr>
+			<tr>
+				<td>pre</td>
+				<td>Пробелы в тексте не игнорируются, браузер отображает дополнительные пробелы и переносы строк.</td>
+			</tr>
+			<tr>
+				<td>pre-wrap</td>
+				<td>Сохраняет пробелы в тексте, делая разрывы строк там, где это необходимо.</td>
+			</tr>
+			<tr>
+				<td>pre-line</td>
+				<td>Удаляет лишние пробелы, за исключением случаев &lt;br&gt;.</td>
+			</tr>
+			<tr>
+				<td>break-spaces</td>
+				<td>Поведение идентично pre-wrap, за исключением того, что: любая последовательность неудаляемых пробелов всегда занимает место, в том числе в конце строки; возможность переноса строки существует после каждого неудаляемого пробела, в том числе между пробелами.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">white-space</span>: normal;<br>
+			<span style="color: red">white-space</span>: nowrap;<br>
+			<span style="color: red">white-space</span>: pre;<br>
+			<span style="color: red">white-space</span>: pre-wrap;<br>
+			<span style="color: red">white-space</span>: pre-line;<br>
+			<span style="color: red">white-space</span>: break-spaces;<br>
+			<span style="color: red">white-space</span>: inherit;<br>
+			<span style="color: red">white-space</span>: initial;</code></p>
+	
+		<h3>Настройка табуляции: свойство tab-size</h3>
+	<p>Свойство tab-size используется для изменения величины отступа, получаемого с помощью клавиши ТAB. Значения свойства игнорируются, когда установлено одно из трёх значений pre-line, normal или nowrap свойства white-space.</p>
+	<p>Работает только для элементов &lt;textarea&gt; и &lt;pre&gt;, для остальных блочных элементов значение всегда будет равно единице. Значения свойства, указанные в единицах длины, поддерживается только в Chrome 42+.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">tab-size</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>целое число</td>
+				<td>Любое целое положительное число. По умолчанию табуляция делает отступ, равный восьми пробелам.</td>
+			</tr>
+			<tr>
+				<td>длина</td>
+				<td>Значение отступа, указываемое в единицах длины, например, рх.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">tab-size</span>: 0;<br>
+			<span style="color: red">tab-size</span>: 10px;<br>
+			<span style="color: red">tab-size</span>: inherit;<br>
+			<span style="color: red">tab-size</span>: initial;</code></p>
+	
+		<h3>Разрыв строки и границы слов</h3>
+	<p>Когда содержимое на строчном уровне разбивается на строки, оно разбивается на линейные блоки. Такое разбиение называется разрыв строки.</p>
+	<p>Когда строка прерывается из-за явных элементов управления разрывом строки, например, символа новой строки или тега <br>, начала или конца блока — это принудительный разрыв строки.</p>
+	<p>Если строка обрывается из-за переноса содержимого, когда браузер создает необязательные разрывы строк, чтобы вписать содержимое — это мягкий перенос.</p>
+		<h3>Правила разрыва для букв: свойство word-break</h3>
+	<p>Свойство word-break определяет возможности мягкого переноса между буквами, т.е. когда допустимо разбивать строки текста. В частности, оно контролирует, существует ли возможность мягкого переноса между смежными типографскими буквенными единицами и/или цифрами. Это не влияет на правила, регулирующие возможности мягкого переноса, созданные пробелами.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">word-break</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>normal</td>
+				<td>Слова разрываются в соответствии с их обычными правилами. Значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>break-all</td>
+				<td>Разрыв допускается в пределах слов. Перенос слов не применяется.</td>
+			</tr>
+			<tr>
+				<td>keep-all</td>
+				<td>Запрещает разрывы между парами символов.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">word-break</span>: normal;<br>
+			<span style="color: red">word-break</span>: break-all;<br>
+			<span style="color: red">word-break</span>: keep-all;<br>
+			<span style="color: red">word-break</span>: inherit;<br>
+			<span style="color: red">word-break</span>: initial;</code></p>
+	
+		<h3>Разрыв строки: line-break</h3>
+	<p>Свойство line-break определяет правила переноса строк, применяемых внутри элемента, в частности то, как перенос взаимодействует со знаками препинания и символами.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">line-break</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>auto</td>
+				<td>Браузер определяет набор используемых ограничений на разрыв строки, которые могут варьироваться в зависимости от длины линии, например, использовать менее строгий набор правил разрыва строки для коротких строк. Значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>loose</td>
+				<td>Разбивает текст, используя наименее ограничивающий набор правил переноса строк. Обычно используется для коротких строк, например, в газетах.</td>
+			</tr>
+			<tr>
+				<td>normal</td>
+				<td>Разбивает текст, используя наиболее распространенный набор правил переноса строк.</td>
+			</tr>
+			<tr>
+				<td>strict</td>
+				<td>Разбивает текст, используя строгий набор правил переноса строк.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">line-break</span>: auto;<br>
+			<span style="color: red">line-break</span>: loose;<br>
+			<span style="color: red">line-break</span>: normal;<br>
+			<span style="color: red">line-break</span>: strict;<br>
+			<span style="color: red">line-break</span>: inherit;<br>
+			<span style="color: red">line-break</span>: initial;</code></p>
+	
+		<h3>Расстановка переносов: свойство hyphens</h3>
+	<p>Свойство hyphens определяет, разрешено ли использование переносов для создания возможностей мягкого переноса внутри строки текста.</p>
+	<p>Расстановка переносов — это контролируемое разбиение слов, при котором им обычно не разрешается разрываться, чтобы улучшить расположение абзацев. Как правило, разбиение слов происходит по слоговым или морфемным границам и при визуальном указании на разделение (обычно путем вставки дефиса, ‐). В некоторых случаях переносы могут также изменить написание слова. В любом случае, перенос слов является только эффектом рендеринга: он не должен влиять ни на содержимое документа, ни на выбор текста или поиск.</p>
+	<p>CSS Text Level 3 не определяет точные правила переноса слов, поэтому рекомендуется выбирать подходящие для языка точки переноса.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">hyphens</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>none</td>
+				<td>Слова не переносятся, даже если символы внутри слова явно определяют возможности переноса.</td>
+			</tr>
+			<tr>
+				<td>manual</td>
+				<td>Слова переносятся только в тех местах, где внутри слова есть символы, которые явно указывают на возможность переноса слов. Значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>auto</td>
+				<td>Слова могут быть разбиты на возможности переноса, определяемые автоматически соответствующим языку ресурсом переноса в дополнение к тем, которые явно указаны условным дефисом. Необходимо задать язык своего контента (например, используя HTML-атрибут lang или заголовок HTTP Content-Language), чтобы получить правильный автоматический перенос слов.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">hyphens</span>: none;<br>
+			<span style="color: red">hyphens</span>: manual;<br>
+			<span style="color: red">hyphens</span>: auto;<br>
+			<span style="color: red">hyphens</span>: inherit;<br>
+			<span style="color: red">hyphens</span>: initial;</code></p>
+	
+		<h3>Переполнение блока-обертки: свойство overflow-wrap/word-wrap</h3>
+	<p>Свойство overflow-wrap (или его устаревшее имя word-wrap) указывает, может ли неразрывная строка прерваться в неразрешенных точках, чтобы предотвратить переполнение линейного блока. Работает в том случае, когда свойство white-space разрешает перенос.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">overflow-wrap, word-wrap</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>normal</td>
+				<td>Влияние значения зависит типа элемента. Значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>anywhere</td>
+				<td>Неразрывная последовательность символов может быть разбита в произвольной точке, если в строке нет других приемлемых точек разрыва. Влияет только на визуальное отображение, не затрагивая исходный текст. В точке разрыва строки символ переноса не добавляется. Возможности мягкого переноса, представленные в любом месте, учитываются при расчете собственных размеров минимального содержимого.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">overflow-wrap</span>: normal;<br>
+			<span style="color: red">overflow-wrap</span>: break-word;<br>
+			<span style="color: red">overflow-wrap</span>: anywhere;<br>
+			<span style="color: red">overflow-wrap</span>: inherit;<br>
+			<span style="color: red">overflow-wrap</span>: initial;</code></p>
+		<h3>Выравнивание и выключка строк</h3>
+	<p>Выравнивание и выключка строк контролируют, как встроенный контент распределяется в линейном блоке.</p>
+		<h3>Краткая запись для выравнивания текста: свойство text-align</h3>
+	<p>Блок текста представляет собой набор линейных блоков. Свойство text-align задает свойства text-align-all и text-align-last и описывает, как блоки на уровне строки в каждом линейном блоке выравниваются относительно начальной и конечной сторон линейного блока. Значения, отличные от justify-all или match-parent, присваиваются text-align-all и сбрасываются в text-align-last на auto.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">text-align</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>start</td>
+				<td>Содержимое на уровне строки выравнивается по конечному краю линейного блока.</td>
+			</tr>
+			<tr>
+				<td>left</td>
+				<td>Содержимое на уровне строки выравнивается по левому краю строки линейного блока. В вертикальных системах письменности это будет физический верх или низ, в зависимости от ориентации текста.</td>
+			</tr>
+			<tr>
+				<td>right</td>
+				<td>Содержимое на уровне строки выравнивается по правому краю строки линейного блока. В вертикальных системах письменности это будет физический верх или низ, в зависимости от ориентации текста.</td>
+			</tr>
+			<tr>
+				<td>center</td>
+				<td>Содержимое на уровне строки центрируется внутри линейного блока.</td>
+			</tr>
+			<tr>
+				<td>justify</td>
+				<td>Текст выравнивается по ширине линейного блока, чтобы точно заполнить поле строки, прижимаюсь к левому и правому краям родительского элемента. Если иное не указано в text-align-last, последняя строка перед принудительным разрывом или конец блока выравнивается по началу. Пробелы между словами и буквами распределяются таким образом, чтобы длина всех строк была равна. Разные браузеры могут увеличить как отступы между словами, так и интервалы между буквами.</td>
+			</tr>
+			<tr>
+				<td>justify</td>
+				<td>Значение ведет себя так же, как inherit за исключением того, что унаследованное значение start или end интерпретируется относительно значения direction (или исходного содержащего блока, если нет родителя) и приводит к вычисленному значению left или right.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">text-align</span>: auto;<br>
+			<span style="color: red">text-align</span>: start;<br>
+			<span style="color: red">text-align</span>: end;<br>
+			<span style="color: red">text-align</span>: left;<br>
+			<span style="color: red">text-align</span>: center;<br>
+			<span style="color: red">text-align</span>: justify;<br>
+			<span style="color: red">text-align</span>: match-parent;<br>
+			<span style="color: red">text-align</span>: inherit;</code></p>
+		<h3>Выравнивание текста по умолчанию: свойство text-align-all</h3>
+	<p>Свойство text-align-all — сокращенный вариант свойства text-align определяет выравнивание всех строк содержимого в контейнере блока, за исключением последних строк, переопределенных значением text-align-last. Принимает значения start, end, left, right, center, justify и match-parent.</p>
+	<p>Свойство наследуется.</p>
+	<h4>Синтаксис</h4><p><code>
+			<span style="color: red">text-align-all</span>: auto;<br>
+			<span style="color: red">text-align-all</span>: start;<br>
+			<span style="color: red">text-align-all</span>: end;<br>
+			<span style="color: red">text-align-all</span>: left;<br>
+			<span style="color: red">text-align-all</span>: center;<br>
+			<span style="color: red">text-align-all</span>: justify;<br>
+			<span style="color: red">text-align-all</span>: match-parent;<br>
+			<span style="color: red">text-align-all</span>: inherit;</code></p>
+		<h3>Выравнивание последней строки: свойство text-align-last</h3>
+	<p>Свойство text-align-last описывает, как выравнивается последняя строка блока или строки непосредственно перед принудительным разрывом строки.</p>
+	<p>Если задано значение auto, содержимое в соответствующей строке выравнивается по text-align-all, если только для text-align-all не настроено justify — в этом случае оно выравнивается по началу блока. Все остальные значения интерпретируются как описано для text-align.</p>
+	<p>Принимает значения auto, start, end, left, right, center, justify и match-parent.</p>
+	<p>Свойство наследуется.</p>
+	<h4>Синтаксис</h4><p><code>
+			<span style="color: red">text-align-last</span>: auto;<br>
+			<span style="color: red">text-align-last</span>: start;<br>
+			<span style="color: red">text-align-last</span>: end;<br>
+			<span style="color: red">text-align-last</span>: left;<br>
+			<span style="color: red">text-align-last</span>: center;<br>
+			<span style="color: red">text-align-last</span>: justify;<br>
+			<span style="color: red">text-align-last</span>: match-parent;</code></p>
+		<h3>Промежутки</h3>
+	<p>CSS позволяет контролировать промежутки между словами и типографскими символами с помощью свойств word-spacing и letter-spacing.</p>
+		<h3>Промежутки между словами: свойство word-spacing</h3>
+	<p>Свойство word-spacing определяет дополнительный интервал между словами.
+Устанавливает интервалы между словами. Можно использовать положительные и отрицательные значения. При отрицательном значении слова могут накладываться друг на друга.</p>
+	<p>На значение word-spacing оказывает влияние значение свойства text-align в случае выравнивания текста по ширине.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">word-spacing</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>normal</td>
+				<td>Дополнительный интервал не применяется. Вычисляет в 0. Значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>длина</td>
+				<td>Задает дополнительный интервал в дополнение к внутреннему интервалу между словами, определенному шрифтом. Значения могут быть отрицательными, но могут быть ограничения, зависящие от реализации.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">word-spacing</span>: normal;<br>
+			<span style="color: red">word-spacing</span>: 1px;<br>
+			<span style="color: red">word-spacing</span>: 0.2em;<br>
+			<span style="color: red">word-spacing</span>: 1rem;<br>
+			<span style="color: red">word-spacing</span>: inherit;<br>
+			<span style="color: red">word-spacing</span>: initial;</code></p>
+		<h3>Трекинг: свойство letter-spacing</h3>
+	<p>Свойство letter-spacing определяет дополнительный интервал, или трекинг, между смежными типографскими символами. Межбуквенный интервал является дополнением к кернингу и word-spacing. В зависимости от действующих правил выравнивания пользовательские агенты могут дополнительно увеличивать или уменьшать расстояние между типографскими символьными единицами для выравнивания текста.</p>
+	<p>Свойство наследуется.</p>
+	<table class="tb">
+			<tr>
+				<th colspan="2" align="center">letter-spacing</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>normal</td>
+				<td>Дополнительный интервал не применяется. Вычисляет в 0. Значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>длина</td>
+				<td>Определяет дополнительный интервал между типографскими символами. Значения могут быть отрицательными, но могут быть ограничения, зависящие от реализации.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">letter-spacing</span>: normal;<br>
+			<span style="color: red">letter-spacing</span>: 2em;<br>
+			<span style="color: red">letter-spacing</span>: 70px;<br>
+			<span style="color: red">letter-spacing</span>: inherit;<br>
+			<span style="color: red">letter-spacing</span>: initial;</code></p>
+		<h3>Отступ первой строки: свойство text-indent</h3>
+	<p>Свойство text-indent задает отступ, применяемый к строкам встроенного содержимого в блоке. Отступ обрабатывается как поле, примененное к начальному краю линейного блока.</p>
+	<p>Если в первой строке блочного элемента присутствует изображение, то оно сдвинется вместе с остальным текстом.</p>
+	<p>Свойство наследуется.</p>
+		<table class="tb">
+			<tr>
+				<th colspan="2" align="center">text-indent</th>
+			</tr>
+			<tr>
+				<td>Значения:</td><td></td>
+			</tr>
+			<tr>
+				<td>длина/%</td>
+				<td>Размер отступа в виде абсолютной длины. Процентное значение вычисляется от собственной логической ширины блока-контейнера. Значение по умолчанию 0.</td>
+			</tr>
+			<tr>
+				<td>each-line</td>
+				<td>Отступы затрагивают первую строку каждого блока-контейнера и каждую строку после принудительного разрыва строки (но не строки после с мягким переносом).</td>
+			</tr>
+			<tr>
+				<td>hanging</td>
+				<td>Обратное преобразование. Все строки, кроме первой, будут с отступом.</td>
+			</tr>
+			<tr>
+				<td>initial</td>
+				<td>Устанавливает значение свойства в значение по умолчанию.</td>
+			</tr>
+			<tr>
+				<td>inherit</td>
+				<td>Наследует значение свойства от родительского элемента.</td>
+			</tr>
+		</table>
+		<h4>Синтаксис</h4><p><code>
+			<span style="color: red">text-indent</span>: 20px;<br>
+			<span style="color: red">text-indent</span>: 10px;<br>
+			<span style="color: red">text-indent</span>: 50%;<br>
+			<span style="color: red">text-indent</span>: 2em;<br>
+			<span style="color: red">text-indent</span>: inherit;<br>
+			<span style="color: red">text-indent</span>: initial;</code></p>
+
+	<div class="container-btn">
+                      <a href="style-position.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-font.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

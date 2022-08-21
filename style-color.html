@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-цвета</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-цвета</h2>
+	<div class="about-content">
+<h4>Содержание:</h4>
+<ol>
+<li><a href="">Приоритетные цвета: свойство color</a></li>
+<li><a href="">Значения цвета</a></li>
+<li><a href="">Основные ключевые слова</a></li>
+<li><a href="">Числовые значения цвета</a></li>
+<li><a href="">Цвета модели RGB</a></li>
+<li><a href="">Цвета модели RGBA</a></li>
+<li><a href="">Ключевое слово transparent</a></li>
+<li><a href="">HSL-цвета</a></li>
+<li><a href="">HSLA-значения цвета</a></li>
+<li><a href="">Ключевое слово currentColor</a></li>
+</ol></div>
+<h3>Приоритетные цвета: свойство color</h3>
+<p>Свойство задаёт цвет шрифта с помощью различных систем цветопередачи. Свойство описывает цвет текстового содержимого элемента. Кроме того, оно используется для предоставления потенциального косвенного значения (currentColor) для любых других свойств, которые принимают значения цвета. <br>Свойство наследуется.</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">color</th>
+</tr>
+<tr>
+<td>Значения:</td>
+<td></td>
+</tr>
+<tr>
+<td>цвет</td>
+<td>Задаётся с помощью значений цвета.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h3>Значения цвета</h3>
+<h3>Основные ключевые слова</h3>
+<p>Список основных ключевых слов включает в себя следующие значения:</p>
+<table class="tb">
+<tr>
+<th>Название</th>
+<th>HEX</th>
+<th>RGB</th>
+<th>Цвет</th>
+</tr>
+<tr>
+<td>black</td>
+<td>#000000</td>
+<td>0,0,0</td>
+<td bgcolor="#000000"></td>
+</tr>
+<tr>
+<td>silver</td>
+<td>#C0C0C0</td>
+<td>192,192,192</td>
+<td bgcolor="#C0C0C0"></td>
+</tr>
+<tr>
+<td>gray</td>
+<td>#808080</td>
+<td>128,128,128</td>
+<td bgcolor="#808080"></td>
+</tr>
+<tr>
+<td>white</td>
+<td>#FFFFFF</td>
+<td>255,255,255 </td>
+<td bgcolor="#FFFFFF"></td>
+</tr>
+<tr>
+<td>maroon</td>
+<td>#800000 </td>
+<td>128,0,0</td>
+<td bgcolor="#800000 "></td>
+</tr>
+<tr>
+<td>red</td>
+<td>#FF0000</td>
+<td>255,0,0</td>
+<td bgcolor="#FF0000"></td>
+</tr>
+<tr>
+<td>purple</td>
+<td>#800080</td>
+<td>128,0,128</td>
+<td bgcolor="#800080"></td>
+</tr>
+<tr>
+<td>fuchsia</td>
+<td>#FF00FF</td>
+<td>255,0,255</td>
+<td bgcolor="#FF00FF"></td>
+</tr>
+<tr>
+<td>green</td>
+<td>#008000</td>
+<td>0,128,0</td>
+<td bgcolor="#008000"></td>
+</tr>
+<tr>
+<td>lime</td>
+<td>#00FF00</td>
+<td>0,255,0</td>
+<td bgcolor="#00FF00"></td>
+</tr>
+<tr>
+<td>olive</td>
+<td>#808000</td>
+<td>128,128,0</td>
+<td bgcolor="#808000"></td>
+</tr>
+<tr>
+<td>yellow</td>
+<td>#FFFF00</td>
+<td>255,255,0</td>
+<td bgcolor="#FFFF00"></td>
+</tr>
+<tr>
+<td>navy</td>
+<td>#000080</td>
+<td>0,0,128</td>
+<td bgcolor="#000080"></td>
+</tr>
+<tr>
+<td>blue</td>
+<td>#0000FF</td>
+<td>0,0,255</td>
+<td bgcolor="#0000FF"></td>
+</tr>
+<tr>
+<td>teal</td>
+<td>#008080</td>
+<td>0,128,128</td>
+<td bgcolor="#008080"></td>
+</tr>
+<tr>
+<td>aqua</td>
+<td>#00FFFF</td>
+<td>0,255,255</td>
+<td bgcolor="#00FFFF"></td>
+</tr>
+</table>
+<p>Названия цветов не чувствительны к регистру.</p>
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: teal;</p></div>
+<h3>Числовые значения цвета</h3>
+<h3>Цвета модели RGB</h3>
+<p>Формат значения RGB в шестнадцатеричном формате — это знак #, за которым сразу следуют три или шесть шестнадцатеричных символов. Трехзначная запись RGB #rgb преобразуется в шестизначную форму #rrggbb путем копирования цифр, а не путем добавления нулей. Например, #fb0 расширяется до #ffbb00. Это гарантирует, что белый #ffffff может быть указан в короткой записи #fff, и удаляет любые зависимости от глубины цвета дисплея.</p><br>
+<p>Формат значения RGB в функциональной нотации — rgb(, за которым следует разделенный запятыми список из трех числовых значений (либо трех целочисленных значений, либо трех процентных значений), за которыми следует символ). Целочисленное значение 255 соответствует 100% и F или FF в шестнадцатеричной записи:</p><br>
+<p>rgb (255,255,255) = rgb (100%, 100%, 100%) = #FFF <br> Символы пробела допускаются вокруг числовых значений.</p><br>
+<p>Все цвета RGB указываются в цветовом пространстве sRGB. Пользовательские агенты могут различаться в точности, с которой они представляют эти цвета, но использование sRGB дает однозначное и объективно измеримое определение того, каким должен быть цвет.</p><br>
+<p>Значения за пределами диапазона устройства должны быть обрезаны или отображены в известном диапазоне: значения красного, зеленого и синего необходимо изменить, чтобы они попадали в диапазон, поддерживаемый устройством. Некоторые устройства, например принтеры, имеют диапазоны, отличные от sRGB, поэтому некоторые цвета за пределами диапазона 0.255 sRGB будут представимы (внутри диапазона устройства) и будут отображаться.</p>
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: #fb0;<br>
+<span style="color: red">color</span>: #ffbb00;<br>
+<span style="color: red">color</span>: rgb(255,0,0);<br>
+<span style="color: red">color</span>: rgb(100%, 0%, 0%);</p></div>
+<h3>Цвета модели RGBA</h3>
+<p>Цветовая модель RGB расширена в этой спецификации, чтобы включить alpha, которая управляющая непрозрачностью цвета. В отличие от значений RGB, для значения RGBA нет шестнадцатеричной записи.</p><br>
+<p>Формат значения RGBA в функциональной нотации — rgba(за которым следует разделенный запятыми список из трех числовых значений (либо трех целочисленных значений, либо трех процентных значений), за которыми следует значение непрозрачности, а затем). Целочисленное значение 255 соответствует 100%, rgba (255,255,255,0.8) = rgba (100%,100%,100%,0.8). Символы пробела допускаются вокруг числовых значений.</p><br>
+<p>Параметр непрозрачности применяется ко всему объекту. Любые значения за пределами диапазона от 0.0 (полностью прозрачный) до 1.0 (полностью непрозрачный) будут ограничены этим диапазоном.</p>
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: rgb(255,0,0);<br>
+<span style="color: red">color</span>: rgb(100%, 0%, 0%);</p></div>
+<h3>Ключевое слово transparent</h3>
+<p>Это ключевое слово можно считать сокращением для прозрачного черного цвета rgba (0,0,0,0), которое является его вычисленным значением.</p>
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: transparent;</p></div>
+<h3>HSL-цвета</h3>
+<p>Цвета RGB не интуитивно понятны. CSS3 добавляет числовые цвета hue-saturation-lightness (HSL) в дополнение к числовым цветам RGB. HSL-цвета симметричны свету и темноте, и преобразование HSL в RGB максимально просто.</p><br>
+<p>Цвета HSL кодируются как тройка (оттенок, насыщенность, яркость). Оттенок представлен как угол цветного круга (то есть радуга, представленная в круге). Этот угол обычно измеряется в градусах, так что эта единица измерения неявна в CSS; синтаксически дается только число. По определению красный = 0 = 360, а остальные цвета распределены по кругу, поэтому зеленый = 120, синий = 240 и т.д. Насыщенность и яркость представлены в процентах. 100% — это полное насыщение, а 0% — это оттенок серого. Яркость 0% — черная, 100% — белая, а 50% — нормальная.</p>
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: hsl(0, 100%, 50%); <br>
+<span style="color: red">color</span>: hsl(120, 100%, 50%);</p></div>
+<h3>HSLA-значения цвета</h3>
+<p>Так же, как функциональная нотация rgb() имеет альфа-аналог rgba(), функциональная нотация hsl() имеет альфа-аналог hsla().</p><br>
+<p>Формат значения цвета HSLA в функциональной нотации — hsla(, за которым следуют оттенок в градусах, насыщенность и яркость в процентах, и значение непрозрачности, после которого следует символ). Символы пробела допускаются вокруг числовых значений.</p>
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: hsl(0, 100%, 50%); <br>
+<span style="color: red">color</span>: hsl(120, 100%, 50%);</p></div>
+
+<h4>Синтаксис</h4>
+<div class="code"><p><code>
+<span style="color: red">color</span>: gold;</p></div>
+<h3>Ключевое слово currentColor</h3>
+<p>CSS1 и CSS2 определили начальное значение свойства border-color как значение свойства color, но не определили соответствующее ключевое слово. Это упущение было распознано SVG, поэтому SVG 1.0 ввел значение currentColor для свойств fill, stroke, stop-color, flood-color и lighting-color. CSS3 расширяет значение цвета, добавляя ключевое слово currentColor, чтобы разрешить его использование со всеми свойствами, которые принимают значение color. Это упрощает определение этих свойств в CSS3.</p><br>
+<p>Используемое значение ключевого слова currentColor — это вычисленное значение свойства color. Если ключевое слово установлено в самом свойстве color, оно рассматривается как color: inherit.</p>
+<h4>Пример</h4>
+<div class="code"><p><code>
+<span style="color: red">body</span>{color: grey;} <br>
+<span style="color: red">div</span>{border: 1px solid currentColor;}</p></div>
+
+
+
+	<div class="container-btn">
+                      <a href="style-content.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="test-menu.html"><button class="next-btn lorange">Перейти к тесту</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="test-container">
+                <button class="passing-test"><a href="test-style-obout.html">Пройти тест</a></button>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

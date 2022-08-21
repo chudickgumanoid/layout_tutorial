@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-фон</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+					<h2>CSS-фон</h2>
+					<div class="about-content">
+					<h4>Содержание:</h4>
+					<ol>
+					<li><a href="">Базовый цвет: свойство background-color</a></li>
+					<li><a href="">Источник изображения: свойство background-image</a></li>
+					<li><a href="">Укладка изображений: свойство background-repeat</a></li>
+					<li><a href="">Фиксация изображения: свойство background-attachment</a></li>
+					<li><a href="">Позиционирование изображений: свойство background-position</a></li>
+					<li><a href="">Область рисования: свойство background-clip</a></li>
+					<li><a href="">Область расположения фона: свойство background-origin</a></li>
+					<li><a href="">Размер изображений: свойство background-size</a></li>
+					<li><a href="">Краткая запись свойств фона: свойство background</a></li>
+					<li><a href="">Множественные фоны</a></li>
+					</ol></div>
+					<h3>Базовый цвет: свойство background-color</h3>
+					<p>Свойство background-color устанавливает цвет фона элемента. Цвет рисуется за фоновыми изображениями. Для блочных элементов цвет фона распространяется на всю ширину и высоту блока элемента, для строчных — только на область их содержимого. <br><br>Цвет фона обрезается в соответствии со значением background-clip самого нижнего слоя фонового изображения. <br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-color</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>цвет</td>
+					<td>Значение принимает все форматы цвета свойства color. Значение по умолчанию transparent.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-color</span>: salmon;<br>
+					<span style="color: red">background-color</span>: #00ff00;<br>
+					<span style="color: red">background-color</span>: rgba(255, 128, 128, 0.5);<br>
+					<span style="color: red">background-color</span>: currentColor;<br>
+					<span style="color: red">background-color</span>: #transparent;<br>
+					<span style="color: red">background-color</span>: inherit;<br>
+					<span style="color: red">background-color</span>: initial;</p></div>
+					<img src="img/css/background-color.png" alt="">
+					<h2>Источник изображения: свойство background-image</h2>
+					<p>Свойство background-image устанавливает фоновое изображение (одно или несколько) элемента. Значение none считается слоем изображения, но ничего не рисует. Изображение, которое является пустым (нулевой ширины или нулевой высоты), которое не загружается или не может быть отображено (например, потому что оно не в поддерживаемом формате изображения) также считается слоем, но ничего не рисует. <br><br>Семантически важные изображения должны предоставляться в разметке документа, например, с тегом <img>. <br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-image</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>изображение</td>
+					<td>Обозначает 2D-изображение. Это может быть ссылка на URL, нотация image() или запись градиента. Значение по умолчанию none.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-image</span>: none;<br>
+					<span style="color: red">background-image</span>: url(http://site.ru/rose.png);<br>
+					<span style="color: red">background-image</span>: url(tl.png), url(tr.png);<br>
+					<span style="color: red">background-image</span>: linear-gradient(white, gray);<br>
+					<span style="color: red">background-image</span>: #transparent;<br>
+					<span style="color: red">background-image</span>: repeating-radial-gradient(circle closest-side at 20px 30px, red, yellow, green 100%, yellow 150%, red 200%);<br>
+					<span style="color: red">background-image</span>: image("sprites.svg#xywh=40,0,20,20");<br>
+					<span style="color: red">background-image</span>initial;</p></div>
+					<h2>Укладка изображений: свойство background-repeat</h2>
+					<p>Свойство background-repeat определяет, как фоновые изображения укладываются в области фона после того, как для них установлены размеры и позиционирование. Если значение свойства имеет два ключевых слова, первое используется для горизонтального направления, второе — для вертикального. <br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-repeat</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>repeat-x</td>
+					<td>Изображение повторяется в горизонтальном направлении. Вычисляется в repeat no-repeat.</td>
+					</tr>
+					<tr>
+					<td>repeat-y</td>
+					<td>Изображение повторяется в вертикальном направлении. Вычисляется в no-repeat repeat.</td>
+					</tr>
+					<tr>
+					<td>repeat</td>
+					<td>Изображение повторяется в обоих направлениях так часто, чтобы покрыть область отрисовки фона. Если изображение не помещается, оно обрезается. Вычисляется в repeat repeat. Значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>space</td>
+					<td>Изображение повторяется столько раз, сколько оно помещается в области фона, не обрезаясь, изображения расположены на равном расстоянии друг от друга. Первое и последнее изображения касаются краев области. Если область рисования фона больше, чем область позиционирования фона, шаблон повторяется, чтобы заполнить область рисования фона. Если недостаточно места для двух копий изображения, то размещается только одно изображение, а свойство background-position определяет его положение. Вычисляется в space space.</td>
+					</tr>
+					<tr>
+					<td>round</td>
+					<td>Изображение повторяется так часто, чтобы заполнить область фона, масштабируешь и не обрезаясь. Вычисляется в round round.</td>
+					</tr>
+					<tr>
+					<td>no-repeat</td>
+					<td>Изображение размещается один раз и не повторяется. Вычисляется в no-repeat no-repeat.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-repeat</span>: repeat-x;<br>
+					<span style="color: red">background-repeat</span>: repeat-y;<br>
+					<span style="color: red">background-repeat</span>: repeat;<br>
+					<span style="color: red">background-repeat</span>: space;<br>
+					<span style="color: red">background-repeat</span>: round;<br>
+					<span style="color: red">background-repeat</span>: no-repeat;<br>
+					<span style="color: red">background-repeat</span>: repeat space;<br>
+					<span style="color: red">background-repeat</span>: repeat repeat;<br>
+					<span style="color: red">background-repeat</span>: round space;<br>
+					<span style="color: red">background-repeat</span>: no-repeat round;<br>
+					<span style="color: red">background-repeat</span>: inherit;<br>
+					<span style="color: red">background-repeat</span>: initial;</p></div>
+					<img src="img/css/background-repeat.png" alt="">
+					<h2>Фиксация изображения: свойство background-attachment</h2>
+					<p>Свойство background-attachment указывает, является ли фоновое изображение фиксированными относительно области просмотра или прокручивается вместе с элементом или его содержимым. <br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-attachment</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>scroll</td>
+					<td>Фоновое изображение прокручивается вместе с текстом и другим содержимым. Значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>fixed</td>
+					<td>Предотвращает перемещение, фиксирует фоновое изображение на заднем плане.</td>
+					</tr>
+					<tr>
+					<td>local</td>
+					<td>Фоновое изображение прокручивается вместе с содержимым элемента.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-attachment</span>: scroll;<br>
+					<span style="color: red">background-attachment</span>: fixed;<br>
+					<span style="color: red">background-attachment</span>: local;<br>
+					<span style="color: red">background-attachment</span>: inherit;<br>
+					<span style="color: red">background-attachment</span>: initial;</p></div>
+					<h2>Позиционирование изображений: свойство background-position</h2>
+					<p>Если для элемента заданы фоновые изображения, свойство background-position указывает их начальное положение (после любого изменения размера) в соответствующей области расположения фона.<br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-position</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>%</td>
+					<td>Горизонтальное смещение вычисляется по формуле ширина области расположения фона — ширина фонового изображения. Вертикальное смещение по формуле высота области расположения фона — высота фонового изображения, где размер изображения — это размер, заданный свойством background-size. Значение по умолчанию 0% 0%.</td>
+					</tr>
+					<tr>
+					<td>длина</td>
+					<td>Значение длины дает фиксированную длину в качестве смещения.</td>
+					</tr>
+					<tr>
+					<td>left</td>
+					<td>Вычисляет до 0% для горизонтальной позиции, если задано одно или два значения, в противном случае смещение происходит относительно левого края.</td>
+					</tr>
+					<tr>
+					<td>center</td>
+					<td>Вычисляет в left 50% для горизонтального положения, если не указано иное горизонтальное положение, или как top 50% для вертикального положения, если оно задано.</td>
+					</tr>
+					<tr>
+					<td>right</td>
+					<td>Вычисляет в 100% для горизонтального положения, если задано одно или два значения, в противном случае смещение происходит относительно правого края.</td>
+					</tr>
+					<tr>
+					<td>top</td>
+					<td>Вычисляет в 0% для вертикальной позиции, если задано одно или два значения, в противном случае смещение происходит относительно верхнего края.</td>
+					</tr>
+					<tr>
+					<td>bottom</td>
+					<td>Вычисляет в 100% для вертикальной позиции, если задано одно или два значения, в противном случае смещение происходит относительно нижнего края.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-position</span>: top;<br>
+					<span style="color: red">background-position</span>: bottom;<br>
+					<span style="color: red">background-position</span>: left;<br>
+					<span style="color: red">background-position</span>: right;<br>
+					<span style="color: red">background-position</span>: center;<br>
+					<span style="color: red">background-position</span>: 25% 75%;<br>
+					<span style="color: red">background-position</span>: inherit;<br>
+					<span style="color: red">background-position</span>: initial;</p></div>
+					<p>Если указано только одно значение, второе значение считается center. Если заданы два значения в единицах длины или %, то первое значения представляет горизонтальную позицию, второе — вертикальную. Значения в единицах длины или % представляют смещение верхнего левого угла фонового изображения от верхнего левого угла области расположения фона.<br><br>Пара ключевых слов может быть переупорядочена, в то время как комбинация ключевого слова и длины или процента не может. Например, center left — допустимое значение, а 50% left — нет.<br><br>Если заданы три или четыре значения в единицах длины или %, то перед каждым значением должно стоять ключевое слово, которое указывает, от какого края дается смещение. Если даны три значения, недостающее смещение считается равным нулю.<br><br>Положительные значения смещают внутрь от края области расположения фона. Отрицательные значения смещают наружу от края области расположения фона.</p>
+					<img src="img/css/background-position.png" alt="">
+					<p>Можно задать фоновую картинку так, чтобы она располагалась только по низу блока:</p>
+					<div class="code"><p><code>
+					div {<br>
+					background-color: #FCF8F7;<br>
+					height: 120px;<br>
+					background-image: url(img/flower112.png);<br>
+					background-position: left bottom;<br>
+					background-repeat: repeat-x;<br>
+					}
+					</code></p></div>
+					<img src="img/css/background_repeat_bottom.png" alt="">
+					<p>Также благодаря свойству позиционирования, для одного блока можно использовать несколько фоновых изображений:</p>
+					<div class="code" style="overflow: scroll;"><p><code>
+					div {<br>
+					width: 660px;<br>
+					background-color:#E0E4EF;<br>
+					height: 300px;<br>
+					background-image: url(img/flower112.png), url(img/leaf112.png),
+					url(https://html5book.ru/images/flower221.png);<br>
+					background-repeat: repeat-x;<br>
+					background-position: 0 250px, 0 150px, 0 98px; <br>}
+					</code></p></div>
+					<img src="img/css/background_repeat-x_bottom.png" alt="">
+					<h2>Область рисования: свойство background-clip</h2>
+					<p>Свойство background-clip определяет область рисования фона. Фон всегда рисуется под рамкой элемента, если таковая имеется.<br><br>Корневой элемент имеет другую область рисования фона, поэтому свойство background-clip на него не влияет.<br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-clip</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>border-box</td>
+					<td>Фон закрашивает область в пределах рамки элемента. Значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>padding-box</td>
+					<td>Фон закрашивает область в пределах внутренних полей элемента.</td>
+					</tr>
+					<tr>
+					<td>content-box</td>
+					<td>Фон закрашивает только область содержимого.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-clip</span>: border-box;<br>
+					<span style="color: red">background-clip</span>: padding-box;<br>
+					<span style="color: red">background-clip</span>: content-box;<br>
+					<span style="color: red">background-clip</span>: text;<br>
+					<span style="color: red">background-clip</span>: inherit;<br>
+					<span style="color: red">background-clip</span>: initial;</p></div>
+					<img src="img/css/background-clip.png" alt="">
+					<h2>Область расположения фона: свойство background-origin</h2>
+					<p>Свойство background-origin указывает область расположения фона для элементов, которые выводятся на экране как единый блок (например, не абзацы текста).<br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-origin</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>padding-box</td>
+					<td>Фон позиционируется относительно верхних границ области внутренних полей элемента. Значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>border-box</td>
+					<td>Фон позиционируется относительно верхних границ рамки элемента.</td>
+					</tr>
+					<tr>
+					<td>content-box</td>
+					<td>Фон позиционируется относительно верхних границ области содержимого элемента.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-origin</span>: border-box;<br>
+					<span style="color: red">background-origin</span>: padding-box;<br>
+					<span style="color: red">background-origin</span>: content-box;<br>
+					<span style="color: red">background-origin</span>: text;<br>
+					<span style="color: red">background-origin</span>: inherit;<br>
+					<span style="color: red">background-origin</span>: initial;</p></div>
+					<p>Если для элемента установлено background-attachment: fixed, свойство не будет иметь эффекта.<br><br>Если для элемента заданы background-clip: padding-box, background-origin: border-box, background-position: top left, и элемент имеет ненулевую рамку, тогда верхняя и левая части фонового изображения будет обрезаны.</p>
+					<img src="img/css/background-origin.png" alt="">
+					<h2>Размер изображений: свойство background-size</h2>
+					<p>Свойство background-size устанавливает размер фоновых изображений.<br><br>Свойство не наследуется.</p>
+					<table class="tb">
+					<tr>
+					<th colspan="2" align="center">background-size</th>
+					</tr>
+					<tr>
+					<td>Значения:</td>
+					<td></td>
+					</tr>
+					<tr>
+					<td>auto</td>
+					<td>Значение по умолчанию. Высота и ширина изображения равны его оригинальным размерам.</td>
+					</tr>
+					<tr>
+					<td>длина</td>
+					<td>Размер задается парой значений, первое значение устанавливает ширину изображения, второе — высоту. Для того, чтобы фон масштабировал вместе с текстом, размеры изображения нужно задавать в em.</td>
+					</tr>
+					<tr>
+					<td>%</td>
+					<td>Задает размер фонового изображения в процентах от ширины или высоты элемента, которое заполняется фоном.</td>
+					</tr>
+					<tr>
+					<td>cover</td>
+					<td>Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.</td>
+					</tr>
+					<tr>
+					<td>contain</td>
+					<td>Масштабирует изображение с сохранением пропорций таким образом, чтобы оно целиком поместилось внутри блока.</td>
+					</tr>
+					<tr>
+					<td>initial</td>
+					<td>Устанавливает значение свойства в значение по умолчанию.</td>
+					</tr>
+					<tr>
+					<td>inherit</td>
+					<td>Наследует значение свойства от родительского элемента.</td>
+					</tr>
+					</table>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background-size</span>: cover;<br>
+					<span style="color: red">background-size</span>: contain;<br>
+					<span style="color: red">background-size</span>: 50%;<br>
+					<span style="color: red">background-size</span>: 6px, auto, contain;<br>
+					<span style="color: red">background-size</span>: inherit;<br>
+					<span style="color: red">background-size</span>: initial;</p></div>
+					<img src="img/css/background-size.png" alt="">
+					<h2>Краткая запись свойств фона: свойство background</h2>
+					<p>Свойство background позволяет описать в одном объявлении следующие свойства фона: background-color, background-image, background-position, background-size, background-repeat, background-origin, background-clip и background-attachment. Необязательно указывать все перечисленные свойства, если какое-либо свойство будет пропущено, оно примет значение по умолчанию.<br><br>Если вы указываете в краткой записи фона свойство background-size, то его значения нужно будет записать через слэш /, чтобы отделить его от свойства background-position.</p>
+					<h4>Синтаксис</h4>
+					<div class="code"><p><code>
+					<span style="color: red">background</span>: gold;<br>
+					<span style="color: red">background</span>: url("rose.png") repeat-y;<br>
+					<span style="color: red">background</span>: border-box red;<br>
+					<span style="color: red">background</span>: no-repeat center/80% url("../img/icon.png");</p></div>
+					<h2>Множественные фоны</h2>
+					<p>Фон блока элемента может иметь несколько слоев в CSS3. Количество слоев определяется количеством значений, разделенных запятыми, указанных в свойстве background-image. Значение none по-прежнему создает слой.</p>
+					<h4>Пример</h4>
+					<div class="code" style="overflow: scroll;"><p><code>
+					div {<br>
+					width: 680px;<br>
+					height: 630px;<br>
+					background-image: url(https://layout-scrath-from.kz/wp-content/uploads/2015/02/flower_rose.png), url(https://layout-scrath-from.kz.ru/wp-content/uploads/love.png), url(https://layout-scrath-from.kz.ru/wp-content/uploads/border_white.png);<br>
+					background-repeat: no-repeat;<br>
+					background-position: bottom right, center center, top left;<br>
+					}
+					</p></div>
+					<p>Первое изображение в списке — это слой, отображаемый ближайший к пользователю, следующий отрисовывается за первым, и так далее. Цвет фона, если он есть, закрашивается под всеми остальными слоями.</p>
+					<img src="img/css/backgrounds.png" alt="">
+
+					
+	<div class="container-btn">
+                      <a href="style-list.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-border.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

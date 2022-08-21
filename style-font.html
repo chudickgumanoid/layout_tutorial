@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-шрифты</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-шрифты</h2>
+<div class="about-content">
+<h4>Содержание:</h4>
+<ol>
+<li><a href="">Семейство шрифтов: свойство font-family</a></li>
+<li><a href="">Насыщенность шрифта: свойство font-weight</a></li>
+<li><a href="">Ширина шрифта: свойство font-stretch</a></li>
+<li><a href="">Начертание шрифта: свойство font-style</a></li>
+<li><a href="">Размер шрифта: свойство font-size</a></li>
+<li><a href="">Относительный размер шрифта: свойство font-size-adjust</a></li>
+<li><a href="">Сокращенная запись свойств шрифта: свойство font</a></li>
+<li><a href="">Управление синтезом шрифтов: свойство font-synthesis</a></li>
+</ol></div>
+<h3>Семейство шрифтов: свойство font-family</h3>
+<p>Свойство font-family используется для выбора начертания шрифта. Поскольку невозможно предсказать, установлен тот или иной шрифт на компьютере посетителя вашего сайта, рекомендуется прописывать все возможные варианты однотипных шрифтов. В таком случае браузер будет проверять их наличие, последовательно перебирая предложенные варианты.</p>
+<p>Если в названии шрифта имеются пробелы или символы (например, #, $, %), то оно заключается в кавычки. Это делается для того, чтобы браузер мог понять, где начинается и заканчивается название шрифта.</p>
+<p>Свойство наследуется.</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-weight</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>family-name</td>
+<td>Название (имя) семейства шрифтов, например, Times, Courier, Arial. Рекомендуется указывать вместе с базовым семейством.</td>
+</tr>
+<tr>
+<td>generic-family</td>
+<td>Базовое семейство. CSS определяет пять базовых семейств шрифтов:<br>
+Шрифты с засечками — Serif (Times New Roman, Times, Garamond, Georgia)<br>
+Рубленые шрифты — Sans-serif (Helvetica, Geneva, Arial, Verdana, Trebuchet, Univers)<br>
+Моноширинные шрифты — Monospace (Courier, Courier New, Andele Mono)<br>
+Рукописные шрифты — Cursive (Comic Sans, Gabriola, Monotype Corsiva, Author, Zapf Chancery)<br>
+Аллегорические шрифты (Western, Woodblock, Klingon)</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-family</span>: "Times New Roman", Georgia, Serif;<br>
+<span style="color: red">font-family</span>: serif;<br>
+<span style="color: red">font-family</span>: sans-serif;<br>
+<span style="color: red">font-family</span>: monospace;<br>
+<span style="color: red">font-family</span>: cursive;<br>
+<span style="color: red">font-family</span>: fantasy;<br>
+<span style="color: red">font-family</span>: system-ui;<br>
+<span style="color: red">font-family</span>: inherit;<br>
+<span style="color: red">font-family</span>: initial;</code></p>
+<h3>Насыщенность шрифта: свойство font-weight</h3>
+<p>Свойство font-weight задаёт насыщенность шрифта.</p>
+<p>Свойство наследуется.</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-weight</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>normal</td>
+<td>Указывает на наиболее сжатый шрифт.</td>
+</tr>
+<tr>
+<td>bold</td>
+<td>Указывает на второй по сжатости шрифт.</td>
+</tr>
+<tr>
+<td>bolder</td>
+<td>Указывает на сжатый шрифт.</td>
+</tr>
+<tr>
+<td>lighter</td>
+<td>Указывает на немного сжатый шрифт.</td>
+</tr>
+<tr>
+<td>100, 200, 300, 400, 500, 600, 700, 800, 900</td>
+<td>Значение 100 соответствует самому легкому варианту начертания шрифта, а 900 — самому плотному. При этом, эти числа не определяют конкретной плотности, т.е. 100, 200, 300 и 400 могут соответствовать одному и тому же варианту слабой насыщенности начертания шрифта; 500 и 600 — средней насыщенности, а 700, 800 и 900 могут выводить одинаковое очень насыщенное начертание. Распределение плотности так же зависит от количества уровней насыщенности, определенных в конкретном семействе шрифтов.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-weight</span>: weight;<br>
+<span style="color: red">font-weight</span>: bold;<br>
+<span style="color: red">font-weight</span>: lighter;<br>
+<span style="color: red">font-weight</span>: bolder;<br>
+<span style="color: red">font-weight</span>: 100;<br>
+<span style="color: red">font-weight</span>: 200;<br>
+<span style="color: red">font-weight</span>: 300;<br>
+<span style="color: red">font-weight</span>: 400;<br>
+<span style="color: red">font-weight</span>: 500;<br>
+<span style="color: red">font-weight</span>: 600;<br>
+<span style="color: red">font-weight</span>: 700;<br>
+<span style="color: red">font-weight</span>: 800;<br>
+<span style="color: red">font-weight</span>: 900;<br>
+<span style="color: red">font-weight</span>: inherit;<br>
+<span style="color: red">font-weight</span>: initial;</code></p>
+<img src="img/css/font-weights.png" alt="">
+<h3>Ширина шрифта: свойство font-stretch</h3>
+<p>Свойство font-stretch выбирает нормальное, сжатое или расширенное начертание символа из семейства шрифтов.</p>
+<p>Свойство наследуется.</p>
+<p>Абсолютные значения ключевых слов имеют следующий порядок, от самого узкого до самого широкого:</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-stretch</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>ultra-condensed</td>
+<td>Указывает на наиболее сжатый шрифт.</td>
+</tr>
+<tr>
+<td>extra-condensed</td>
+<td>Указывает на второй по сжатости шрифт.</td>
+</tr>
+<tr>
+<td>condensed</td>
+<td>Указывает на сжатый шрифт.</td>
+</tr>
+<tr>
+<td>semi-condensed</td>
+<td>Указывает на немного сжатый шрифт.</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>Значение по умолчанию.</td>
+</tr>
+<tr>
+<td>semi-expanded</td>
+<td>Слегка расширенный шрифт.</td>
+</tr>
+<tr>
+<td>expanded</td>
+<td>Расширенный шрифт.</td>
+</tr>
+<tr>
+<td>extra-expanded</td>
+<td>Второй по расширенности шрифт.</td>
+</tr>
+<tr>
+<td>ultra-expanded</td>
+<td>Максимально расширенный шрифт.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-stretch</span>: ultra-condensed;<br>
+<span style="color: red">font-stretch</span>: extra-condensed;<br>
+<span style="color: red">font-stretch</span>: condensed;<br>
+<span style="color: red">font-stretch</span>: semi-condensed;<br>
+<span style="color: red">font-stretch</span>: normal;<br>
+<span style="color: red">font-stretch</span>: semi-expanded;<br>
+<span style="color: red">font-stretch</span>: expanded;<br>
+<span style="color: red">font-stretch</span>: extra-expanded;<br>
+<span style="color: red">font-stretch</span>: ultra-expanded;<br>
+<span style="color: red">font-stretch</span>: inherit;<br>
+<span style="color: red">font-stretch</span>: initial;</code></p>
+<p>Когда не существует глифа для заданной ширины, значения normal или condensed отображаются для более узкого начертания символа, в противном случае отображается более широкое начертание. И наоборот, расширенные значения используют широкое начертание, в противном случае — узкое начертание. На рисунке ниже показано, как девять параметров свойства влияют на выбор шрифта для семейства шрифтов, содержащего различные ширины, серый цвет указывает ширину, для которой не существует начертания, поэтому подставляется другая ширина:</p>
+<img src="img/css/font-stretch.png" alt="">
+<h3>Начертание шрифта: свойство font-style</h3>
+<p>Свойство font-style позволяет выбрать стиль начертания для шрифта. При этом разница между курсивом и наклонным начертанием заключается в том, что курсив вносит небольшие изменения в структуру каждого символа, в то время как наклонное начертание представляет собой наклонную версию прямого шрифта.</p>
+<p>Свойство наследуется.</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-style</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>normal</td>
+<td>Значение по умолчанию, устанавливает для текста обычное начертание шрифта.</td>
+</tr>
+<tr>
+<td>italic</td>
+<td>Выделяет текст курсивом.</td>
+</tr>
+<tr>
+<td>oblique</td>
+<td>Устанавливает наклонное начертание шрифта.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-style</span>: normal;<br>
+<span style="color: red">font-style</span>: italic;<br>
+<span style="color: red">font-style</span>: oblique;<br>
+<span style="color: red">font-style</span>: inherit;<br>
+<span style="color: red">font-style</span>: initial;</code></p>
+<img src="img/css/font-styles-prop.png" alt="">
+<h3>Размер шрифта: свойство font-size</h3>
+<p>Свойство font-size указывает желаемую высоту глифов из шрифта.</p>
+<p>Свойство наследуется.</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-size</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>absolute-size</td>
+<td>xx-small, x-small, small, medium, large, x-large, xx-large. В качестве стандартного размера принимается medium. В CSS1 предложенный коэффициент масштабирования между соседними индексами составлял 1.5, что для пользователя оказалось слишком большим. В CSS2 предложенный коэффициент масштабирования для экрана компьютера между смежными индексами составлял 1.2, что все еще создавало проблемы для небольших размеров. Новый коэффициент масштабирования варьируется между каждым индексом, чтобы обеспечить лучшую читаемость.</td>
+</tr>
+<tr>
+<td>relative-size</td>
+<td>smaller, larger. Относительные размеры обусловливают изменение размера шрифта элемента относительно родителя. При этом размер шрифта может выйти за рамки размеров, предполагаемых для xx-small и xx-large.</td>
+</tr>
+<tr>
+<td>длина</td>
+<td>Размер шрифта устанавливается с помощью положительных значений единиц длины, например, px, em, как целых, так и дробных.</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Относительное значение, вычисляется на основании любого размера, унаследованного от родительского элемента. Обеспечивает более точную настройку вычисляемого размера шрифта. Задание размеров шрифта с помощью em эквивалентно процентному значению.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-size</span>: xx-small;<br>
+<span style="color: red">font-size</span>: x-small;<br>
+<span style="color: red">font-size</span>: small;<br>
+<span style="color: red">font-size</span>: medium;<br>
+<span style="color: red">font-size</span>: large;<br>
+<span style="color: red">font-size</span>: x-large;<br>
+<span style="color: red">font-size</span>: xx-large;<br>
+<span style="color: red">font-size</span>: smaller;<br>
+<span style="color: red">font-size</span>: larger;<br>
+<span style="color: red">font-size</span>: 14px;<br>
+<span style="color: red">font-size</span>: 0.8em;<br>
+<span style="color: red">font-size</span>: 80%;<br>
+<span style="color: red">font-size</span>: initial;</code></p>
+<table class="tb">
+<tr>
+<th colspan="8" align="center">font-size-adjust</th>
+</tr>
+<tr>
+<td>xx-small</td>
+<td>x-small</td>
+<td>small</td>
+<td>medium</td>
+<td>large</td>
+<td>x-large </td>
+<td>xx-large</td>
+<td></td>
+</tr>
+<tr>
+<td>3/5</td>
+<td>3/4</td>
+<td>8/9</td>
+<td>1</td>
+<td>6/5</td>
+<td>3/2</td>
+<td>2/1</td>
+<td>3/1</td>
+</tr>
+<tr>
+<td>h6</td>
+<td></td>
+<td>h5</td>
+<td>h6</td>
+<td>h3</td>
+<td>h3</td>
+<td>h1</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td></td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</table>
+<h3>Относительный размер шрифта: свойство font-size-adjust</h3>
+<p>Для любого заданного размера шрифта явный размер и четкость текста варьируется в зависимости от шрифта. Для таких шрифтов, как латиница или кириллица, которые различают прописные и строчные буквы, относительная высота строчных букв по сравнению с их прописными аналогами является определяющим фактором удобочитаемости. Это обычно называют значением аспекта. Точно определенный, он равен x-height шрифта, разделенной на размер шрифта.</p>
+<p>В ситуациях, когда для шрифта указано несколько семейств шрифтов, резервные шрифты могут не использовать то же значение аспекта, что и желаемое семейство шрифтов, и, следовательно, будут казаться менее четкими.</p>
+<p>Свойство font-size-adjust — способ сохранить читабельность текста при использовании резервных шрифтов. Это достигается путем настройки размера шрифта таким образом, чтобы x-height была одинаковой независимо от используемого шрифта.</p>
+<p>Свойство наследуется.</p>
+<img src="img/css/font-anatomy.png" alt="">
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-size-adjust</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>none</td>
+<td>Не сохраняет x-height шрифта.</td>
+</tr>
+<tr>
+<td>число</td>
+<td>Задает значение аспекта, используемое в приведенных ниже расчетах для расчета скорректированного размера шрифта: <br>
+c = (a / a ') s <br>
+где: <br>
+s = значение размера шрифта<br>
+a = значение аспекта, указанное в свойстве font-size-adjust<br>
+a ' = значение аспекта фактического шрифта<br>
+c = скорректированный размер шрифта для использования<br>
+Отрицательные значения недействительны.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-size-adjust</span>: none;<br>
+<span style="color: red">font-size-adjust</span>: 0.7;<br>
+<span style="color: red">font-size-adjust</span>: inherit;<br>
+<span style="color: red">font-size-adjust</span>: initial;</code></p>
+<p>Как отображается текст в каждом из этих сравниваемых шрифтов, показано ниже, столбцы показывают текст, отображаемый в Verdana, Futura и Times. Одно и то же значение размера шрифта используется для ячеек в каждой строке, и для отображения различий по x-height включены красные линии. В верхней половине каждая строка отображается в том же значении размера шрифта. То же самое верно и для нижней половины, но в этой половине также устанавливается свойство font-size-adjust, чтобы фактический размер шрифта регулировался таким образом, чтобы сохранить x-height для каждой строки. Обратите внимание, что небольшой текст остается относительно разборчивым в каждой строке в нижней половине.</p>
+<img src="img/css/font-size-adjust.png" alt="">
+<h3>Сокращенная запись свойств шрифта: свойство font</h3>
+<p>Свойство font за исключением описанного ниже, является сокращенным свойством для установки font-style, font-variant, font-weight, font-stretch, font-size/line-height, font-family. Также могут быть включены значения для свойства font-variant, которые поддерживаются CSS 2.1 — normal или small-caps.</p>
+<p>Все под свойства свойства font сначала сбрасываются на свои начальные значения, включая перечисленные выше, плюс font-size-adjust, font-kerning, все под свойства font-variant и настройки шрифтов, за исключением font-synthesis. Затем этим свойствам присваиваются те значения, которые указаны в свойстве font. Для свойства font-size-adjust невозможно установить значение, отличное от его начального значения, поэтому следует использовать вместо этого индивидуальное свойство. Если явное значение какого-либо свойства не нужно, то оно опускается.</p>
+<p>Свойство наследуется.</p>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font</span>: 12pt/14pt sans-serif;<br>
+<span style="color: red">font</span>: 80% sans-serif;<br>
+<span style="color: red">font</span>: x-large/110% "new century schoolbook", serif;<br>
+<span style="color: red">font</span>: bold italic large Palatino, serif;<br>
+<span style="color: red">font</span>: normal small-caps 120%/120% fantasy;<br>
+<span style="color: red">font</span>: condensed oblique 12pt "Helvetica Neue", serif;</code></p>
+<p>Следующие значения относятся к системным шрифтам:</p>
+<ul>
+<li>caption — шрифт, используемый для элементов управления с субтитрами (например, кнопок, раскрывающихся списков и т.д.).</li>
+<li>icon — шрифт, используемый для обозначения значков.</li>
+<li>menu — шрифт, используемый в меню (например, раскрывающиеся меню и списки меню).</li>
+<li>message-box — шрифт, используемый в диалоговых окнах.</li>
+<li>small-caption — шрифт, используемый для маркировки подписи элементов управления.</li>
+<li>status-bar — шрифт, используемый в строке состояния окна.</li>
+</ul>
+<p>Системные шрифты могут быть установлены только целиком;, то есть семейство шрифтов, размер, вес, стиль и т.д. задаются одновременно. Эти значения затем могут быть изменены индивидуально, если это необходимо. Ключевые слова, используемые для системных шрифтов, перечисленных выше, обрабатываются как ключевые слова только в том случае, если они находятся в начальной позиции, в других позициях эта же строка обрабатывается как часть имени семейства шрифтов. Системные шрифты могут быть указаны только с этим свойством, но не с самим font-family.</p><br>
+<div class="code"><p><code>
+font: menu; /* используются настройки шрифта для системных меню */<br><br>
+font: large menu; /* используется семейство шрифтов под названием "menu" */
+</code></p></div>
+<h3>Управление синтезом шрифтов: свойство font-synthesis</h3>
+<p>Свойство font-synthesis определяет, разрешено ли пользовательским агентам (браузерам) синтезировать полужирное или наклонное начертание шрифтов, когда они отсутствуют в семействе шрифтов. Если weight не указан, пользовательские агенты не должны синтезировать полужирное начертание, а если style не указан, пользовательские агенты не должны синтезировать курсив.</p>
+<p>Свойство наследуется.</p>
+<table class="tb">
+<tr>
+<th colspan="2" align="center">font-synthesis</th>
+</tr>
+<tr>
+<td>Значения:</td><td></td>
+</tr>
+<tr>
+<td>none</td>
+<td>Запрещает синтез начертаний.</td>
+</tr>
+<tr>
+<td>weight и/или style</td>
+<td>По умолчанию свойство принимает значение font-synthesis: weight style;. Если указано только weight, это говорит браузеру, что жирный шрифт может быть синтезирован при необходимости. Если только style — синтезируется только курсив.</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>Устанавливает значение свойства в значение по умолчанию.</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>Наследует значение свойства от родительского элемента.</td>
+</tr>
+</table>
+<h4>Синтаксис</h4><p><code>
+<span style="color: red">font-synthesis</span>: none;<br>
+<span style="color: red">font-synthesis</span>: weight;<br>
+<span style="color: red">font-synthesis</span>: style;<br>
+<span style="color: red">font-synthesis</span>: weight style;<br>
+<span style="color: red">font-synthesis</span>: inherit;<br>
+<span style="color: red">font-synthesis</span>: initial;</code></p>
+
+	<div class="container-btn">
+                      <a href="style-text.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-link.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

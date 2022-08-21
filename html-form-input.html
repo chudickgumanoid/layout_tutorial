@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-adaptive.css">
+    <link rel="stylesheet" href="css/font/all.min.css">
+
+</head>
+<body>
+        <header>
+            <div class="logo">
+                <a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+            </div>
+        
+        
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+        </header>
+    
+
+        <main class="html-lesson">
+            <div class="html-bg">
+                <div class="html-main">
+                    <h2>Формы</h2><br>
+                    <p>Формы в HTML используются для сбора информации от пользователя. Формы создаются с помощью элемента form, который имеет открывающий и закрывающий теги:</p>
+<div class="code">                   
+<pre>
+<p><code>
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Формы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;form&gt;
+            ...
+        &lt;form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></p>
+</pre>
+</div><br><br>
+
+                    <p>Атрибут action указывает на веб-страницу, которая должна загрузиться после отправки формы пользователем.</p>
+
+                    <h4>Атрибуты method и name</h4>
+                    <p>Атрибут метод определяет метод HTTP (GET или POST) , которые будут использоваться, когда формы представлены:</p>
+<div class="code">                   
+<pre>
+<p><code>&lt;form action="url" method="GET"&gt;
+</code></p>
+</pre>
+</div><br>
+<div class="code">                   
+<pre>
+<p><code> &lt;form action="url" method="POST"&gt;
+</code></p>
+</pre>
+</div><br><br>
+
+                    <p> Чтобы принять пользовательский ввод, вам нужны соответствующие элементы формы, такие как текстовые поля. Элемент &lt;input&gt; имеет много вариантов, в зависимости от атрибута type. Это может быть текст, пароль, радио, URL, отправить и т. Д.</p><br><br>
+
+                    <h4>Элементы форм</h4>
+                    <p>Если мы изменим тип ввода на радио, это позволит пользователю выбрать только один из нескольких вариантов:</p>
+<div class="code">                   
+<pre>
+<p><code>
+    &lt;input type = " radio " name = "пол" value = " мужчина " /&gt; мужчина &lt;br/&gt; 
+    &lt;input type = " radio " name = "пол" значение = " женщина " /&gt; женщина &lt;br/&gt;
+</code></p>
+</pre>
+</div><br>
+<img src="img/html-lesson/33.jpg" alt="">
+
+                    
+<div class="code">                   
+<pre>
+<p><code>
+    &lt;input type = " submit " value = "Submit" /&gt;  
+</code></p>
+</pre>
+</div><br>
+<img src="img/html-lesson/34.jpg" alt="">
+
+                    <br>
+                    <div class="html-prompt">
+                        <h3>Важно!</h3>
+                        <p>Формы отправляются на веб-страницу, которая расположена на сервере.</p><br>
+                        <p>Атрибут name указывает имя для формы.</p><br>
+                        <p>Тег input не имеет закрывающего тега.</p>
+                    </div>
+
+                  
+                    <div class="container-btn">
+                      <a href="html-table.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                    
+
+                      <a href="html-color.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+    <footer>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="glossrary.html">Глоссарий</a>
+            <a href="task.html">Задания</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+        </div>
+        <div class="social">
+            <a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+            <a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+            <a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+            <a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+        </div><br><br>
+        <p>КГУ Карагандинский профессионально технический колледж</p>
+        <p>Руководитель: Абдрахманова Светлана Владимировна</p>
+        <p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+    </footer>
+
+    <script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script> 
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-списки</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-списки</h2>
+	<div class="about-content">
+	<h4>Содержание:</h4>
+	<ol>
+		<li><a href="">Тип маркера списка list-style-type</a></li>
+		<li><a href="">Изображения для элементов списка list-style-image</a></li>
+		<li><a href="">Местоположение маркера списка list-style-position</a></li>
+		<li><a href="">Краткая форма задания стилей списка</a></li>
+	</ol></div>
+		<h3>Тип маркера списка list-style-type</h3>
+	<p>Свойство изменяет типа маркера или удаляет маркер для маркированного и нумерованного списков. Наследуется.</p>
+
+		<h3>Изображения для элементов списка list-style-image</h3>
+	<p>В качестве маркера элементов списка можно использовать изображения и градиентые заливки. Наследуется.</p>
+	<table class="tb">
+		<tr >
+			<th colspan="2" align="center">list-style-image</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>url(url)</td>
+			<td>Путь к изображению.</td>
+		</tr>
+		<tr>
+			<td>none</td>
+			<td>Значение по умолчанию, означает отсутствие изображения. Также убирает изображение для элемента из группы элементов с установленным изображением-маркером.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">ul</span>{list-style-image: url("images/romb.png");}<br>
+		<span style="color: red">ul</span>{list-style-image: linear-gradient(#FF7A2F 0, #FF7A2F 50%, #FFB214 50%);}</p></div>
+		<h3>Местоположение маркера списка list-style-position</h3>
+	<p>Данное свойство предоставляет возможность располагать маркер вне или внутри содержимого элемента списка. Наследуется.</p>
+	<table class="tb">
+		<tr >
+			<th colspan="2" align="center">list-style-position</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>outside</td>
+			<td>Значение по умолчанию. Маркер располагается вне блока с текстом.</td>
+		</tr>
+		<tr>
+			<td>inside</td>
+			<td>Маркер списка изображается в одном блоке с текстом. Последующие строки текста будут располагаться под значком маркера, т.е. маркер будет обтекаться текстом.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">ul</span>{list-style-position: inside;}<br>
+		<span style="color: red">ol</span>{list-style-position: outside;}</p></div>
+		<h3>Краткая форма задания стилей списка</h3>
+	<p>Можно объединить все три свойства форматирования списка в одно с помощью list-style. Значения свойств могут быть расположены в произвольном порядке, а часть значений может быть опущена. Если присутствует одно значение, то другие свойства примут значения браузера по умолчанию.</p>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">ul</span>{list-style: url("images/romb.png") inside;}</p></div>
+	<div class="container-btn">
+                      <a href="style-table.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-background.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

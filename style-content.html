@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS content</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS content</h2>
+	<div class="about-content">
+	<h4>Содержание:</h4>
+	<ol>
+		<li><a href="">Свойство content</a></li>
+		<li><a href="">Добавление специального символа</a></li>
+		<li><a href="">Добавление текста</a></li>
+		<li><a href="">Добавление изображения</a></li>
+		<li><a href="">Добавление блочного содержимого</a></li>
+		<li><a href="">Добавление значения атрибута</a></li>
+		<li><a href="">Добавление кавычек</a></li>
+		<li><a href="">Форматирование кавычек quotes</a></li>
+	</ol></div>
+		<h3>Свойство content</h3>
+	<p>В основе генерируемого содержимого лежат псевдоэлементы ::before или ::after. Псевдоэлементы создают абстракции о дереве документа помимо тех, которые определены языком документа, в данном случае — HTML. Например, HTML не предлагает механизмы доступа к первой букве или первой строке содержимого элемента. Псевдоэлементы CSS позволяют ссылаться на эту не имеющую доступа информацию. Псевдоэлементы также предоставляют дизайнерам стилей способ присвоить стиль содержимому, которого нет в исходном документе.</p>
+	<div class="code"><p><code>
+		h1:before, h1:after {<br>
+		content: "";<br>
+		}
+	</code></p></div>
+	<p>Генерируемое содержимое наследует значения свойств от элемента, к которому оно прикрепляется. При этом наследуются только наследуемые свойства.</p>
+	<table class="tb">
+		<tr>
+			<th colspan="2" align="center">content</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>normal</td>
+			<td>Значение по умолчанию, означает отсутствие добавляемого содержимого.</td>
+		</tr>
+		<tr>
+			<td>none</td>
+			<td>Не добавляет содержимое. Используется в случае, когда нужно удалить генерируемое содержимое для одного элемента из группы элементов (например, элементы списка), для которых уже задано это свойство.</td>
+		</tr>
+		<tr>
+			<td>counter()</td>
+			<td>Даёт возможность создавать счётчики, задавая для них точку отсчёта и приращение на некоторую величину с помощью свойства counter-reset. Для прямого увеличения счёта необходимо использовать свойство counter-increment.</td>
+		</tr>
+		<tr>
+			<td>attr()</td>
+			<td>Добавляет до или после элемента значение атрибута, заключённого в скобки. Чтобы вставить пробел между основным содержимым и генерируемым, нужно добавить пробел перед скобкой или после нее, например, content: attr( href);</td>
+		</tr>
+		<tr>
+			<td>" "</td>
+			<td>Текст, который добавляется на веб-страницу, должен быть заключен в двойные или одинарные кавычки. Пустые кавычки можно использовать для добавления блочного содержимого.</td>
+		</tr>
+		<tr>
+			<td>open-quote</td>
+			<td>Добавляет к содержимому открывающую кавычку.</td>
+		</tr>
+		<tr>
+			<td>close-quote</td>
+			<td>Добавляет к содержимому закрывающую кавычку.</td>
+		</tr>
+		<tr>
+			<td>no-open-quote</td>
+			<td>Удаляет открывающую кавычку, при этом уровень их вложенности продолжает учитываться.</td>
+		</tr>
+		<tr>
+			<td>no-close-quote</td>
+			<td>Удаляет закрывающую кавычку.</td>
+		</tr>
+		<tr>
+			<td>url()</td>
+			<td>Добавляет медиа-содержимое, например, изображение, звук, видео. В качестве значения атрибута в скобках указывается адрес внешнего ресурса, который вставляется в выбранное место документа.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+		<h3>Добавление специального символа</h3>
+	<p>Можно оживить текст с помощью добавления специальных символов. В качестве значения используется символ Юникода.</p>
+	<div class="code"><p><code>
+		h1 { <br>
+font-family: 'Niconne', cursive; <br>
+font-size: 50px; <br>
+color: #e12527; <br>
+}<br>
+h1:before, h1:after { <br>
+content: "\2746"; <br>
+display: inline-block; <br>
+font-size: 60px; <br>
+color: #38afaa; <br>
+-webkit-animation: my 4s infinite alternate; <br>
+animation: my 4s infinite alternate; <br>
+}<br>
+h1:before { <br>
+margin-right: 0.5em; <br>
+}<br>
+h1:after { <br>
+margin-left: 0.5em; <br>
+}<br>
+@-webkit-keyframes my {<br>
+    0%   {color: #2e2f92;}<br>
+    25%  {color: #38afaa;}<br>
+    50%  {color: #5b59a7;}<br>
+    75%  {color: #f7b21c;}<br>
+    100% {color: #e12527;}<br>
+ }<br>
+@keyframes my {<br>
+    0%   {color: #2e2f92;}<br>
+    25%  {color: #38afaa;}<br>
+    50%  {color: #5b59a7;}<br>
+    75%  {color: #f7b21c;}<br>
+    100% {color: #e12527;}<br>
+ }<br>
+	</code></p></div>
+		<h3>Добавление текста</h3>
+	<p>В качестве генерируемого содержимого между кавычками можно поместить любой текст, и он появится в указанном месте, при этом текст в кавычках выводится как есть.</p>
+	<div class="code"><p><code>
+		h1:before, h1:after {<br>
+content: "Yay!";<br>
+font-family: 'Dancing Script', cursive;<br>
+color: #f7b21c;<br>
+text-shadow: 1px 1px 2px grey; <br>
+}<br>
+h1:before {<br>
+margin-right: 30px;<br>
+}<br>
+h1:after {<br>
+margin-left: 30px;<br>
+}
+	</code></p></div>
+		<h3>Добавление изображения</h3>
+	<div class="code"><p><code>
+		h1:before { <br>
+content: url(https://html5book.ru/images/left-twig.png); <br>
+display: inline-block;<br>
+margin-right: 10px; <br>
+}
+	</code></p></div>
+		<h3>Добавление блочного содержимого</h3>
+	<img src="img/css/content_block.png" width="400px" alt="">
+	<div class="code"><p><code>
+*{box-sizing:border-box;}<br>
+div {<br>
+  position: relative;<br>
+  width: 680px;<br>
+  height: 100px;<br>
+  border: 1px solid #C2C9D5;<br>
+  margin-top: 40px;<br>
+  background: linear-gradient(to top,#D7DFED, #F5FCFD, #D7DFED)<br>
+}<br>
+/*Кружок*/<br>
+div:nth-child(1):before {<br>
+  content: "";<br>
+  display: inline-block;<br>
+  position: absolute;<br>
+  left: calc(50% - 11px);<br>
+  left: -webkit-calc(50% - 11px);<br>
+  top: -11px;<br>
+  width: 20px;<br>
+  height: 20px;<br>
+  border-radius: 50%;<br>
+  border: 1px solid #AC170E;<br>
+  background: orangered;<br>
+  box-shadow: 0 2px 4px  #292825;<br>
+}<br>
+/*Треугольник*/<br>
+div:nth-child(2):before {<br>
+  content: "";<br>
+  display: inline-block;<br>
+  width: 0;<br>
+  height: 0;<br>
+  border-style: solid;<br>
+  border-width: 0 20px 20px 20px;<br>
+  border-color: transparent transparent hotpink transparent;<br>
+  position: absolute;<br>
+  left: calc(50% - 15px);<br>
+  left: -webkit-calc(50% - 15px);<br>
+  top: -21px;<br>
+}<br>
+/*Зебра*/<br>
+div:nth-child(3):before{<br>
+  content: "";<br>
+  display: inline-block;<br>
+  position: absolute;<br>
+  height: 10px;<br>
+  width: 100%;<br>
+  background: repeating-linear-gradient(45deg, turquoise, turquoise 10px, #D7DFED 10px, #D7DFED 20px);<br>
+}<br>
+/*Треугольник с обводкой*/<br>
+div:nth-child(4) {<br>
+  border: 3px solid #3E3A40;<br>
+}<br>
+div:nth-child(4):before {<br>
+  content: "";<br>
+  display: inline-block;<br>
+  width: 20px;<br>
+  height: 20px;<br>
+  border: 3px solid #3E3A40;<br>
+  transform: rotate(135deg);<br>
+  position: absolute;<br>
+  left: calc(50% - 11px);<br>
+  left: -webkit-calc(50% - 11px);<br>
+  top: -15px;<br>
+  background:linear-gradient(to top right,#CDD3CD, #EEF0EE, #CDD3CD);<br>
+  z-index: -1;<br>
+}
+	</code></p></div>
+		<h3>Добавление значения атрибута</h3>
+	<p>Функция attr() позволяет добавить любое значение атрибута, например, url-адрес ссылки, который будет выводиться при печати текста.</p>
+	<div class="code"><p><code>
+		a:after {<br>
+  			content: attr(href);<br>
+				}
+	</code></p></div>
+		<h3>Добавление кавычек</h3>
+	<img src="img/css/content_sometext.png" width="400px" alt="">
+	<p>С помощью значений open-quote и close-quote можно генерировать открывающие и закрывающие кавычки. Внешний вид кавычек указывается в свойстве quotes. Если оно не задано, то будут использованы значения браузера по умолчанию.</p>
+	<div class="code"><p><code>
+		&lt;blоckquotе&gt;Some text&lt;/blоckquotе&gt;
+	</code></p></div>
+	<div class="code"><p><code>
+		blockquote {<br>
+  quotes: "\2039" "\203A";<br>
+  font-size: 40px;<br>
+  font-family: 'Sigmar One', cursive;<br>
+}<br>
+blockquote:before {<br>
+  content: open-quote;<br>
+  color: mediumvioletred;<br>
+  margin-right: 10px;<br>
+}<br>
+  blockquote:after  {<br>
+  content: close-quote;<br>
+  color: mediumvioletred;<br>
+  margin-left: 10px;<br>
+}
+	</code></p></div>
+		<h3>Форматирование кавычек quotes</h3>
+	<p>Свойство задаёт тип кавычек, используемых в документе для вложенных цитат. По умолчанию кавычками оформляется текст, заключенный в тег <q>. Также кавычки можно сгенерировать помощью свойства content, задав ему значения open-quote и close-quote. В качестве значения используется специальный символ HTML или символ Юникода. Наследуется.</p>
+	<table class="tb">
+		<tr>
+			<th colspan="2" align="center">quotes</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>[символ символ]+</td>
+			<td>Определяет вид открывающей и закрывающей кавычек. Первая пара используется для отображения внешнего уровня цитирования, вторая и последующие — для вложенных уровней цитирования.
+</td>
+		</tr>
+		<tr>
+			<td>none</td>
+			<td>Текст отображается без кавычек.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">p</span>{quotes:'«' '»';} <br>
+		<span style="color: red">p</span>{quotes: none;}</p></div>
+	<table class="tb">
+		<tr>
+			<th>Описание</th>
+			<th>Внешний вид</th>
+			<th>Номер в Юникоде</th>
+		</tr>
+		<tr>
+			<td>Двойная кавычка</td>
+			<td>"</td>
+			<td>\0022</td>
+		</tr>
+		<tr>
+			<td>Апостроф</td>
+			<td>'</td>
+			<td>\0027</td>
+		</tr>
+		<tr>
+			<td>Открывающая одинарная кавычка</td>
+			<td>‘</td>
+			<td>\2018</td>
+		</tr>
+		<tr>
+			<td>Закрывающая двойная кавычка</td>
+			<td>’</td>
+			<td>\2019</td>
+		</tr>
+		<tr>
+			<td>Закрывающая двойная кавычка</td>
+			<td>“</td>
+			<td>\201C</td>
+		</tr>
+		<tr>
+			<td>Правая двойная кавычка</td>
+			<td>”</td>
+			<td>\201D</td>
+		</tr>
+		<tr>
+			<td>Двойная нижняя кавычка</td>
+			<td>⹂</td>
+			<td>\2E42</td>
+		</tr>
+		<tr>
+			<td>Открывающая левая кавычка «ёлочка»</td>
+			<td>«</td>
+			<td>\00AB</td>
+		</tr>
+		<tr>
+			<td>Закрывающая правая кавычка «ёлочка»</td>
+			<td>»</td>
+			<td>\00BB</td>
+		</tr>
+		<tr>
+			<td>Нижняя одинарная открывающая кавычка</td>
+			<td>‚</td>
+			<td>\201A</td>
+		</tr>
+		<tr>
+			<td>Верхняя одинарная обратная кавычка</td>
+			<td>‛</td>
+			<td>\201B</td>
+		</tr>
+		<tr>
+			<td>Нижняя двойная открывающая кавычка</td>
+			<td>„</td>
+			<td>\201E</td>
+		</tr>
+		<tr>
+			<td>Двойная верхняя обратная кавычка</td>
+			<td>‟</td>
+			<td>\201F</td>
+		</tr>
+		<tr>
+			<td>Одинарная открывающая (левая) французская угловая кавычка</td>
+			<td>‹</td>
+			<td>\2039</td>
+		</tr>
+		<tr>
+			<td>Одинарная закрывающая (правая) французская угловая кавычка</td>
+			<td>›</td>
+			<td>\203A</td>
+		</tr>
+	</table>
+	<div class="container-btn">
+                      <a href="style-border.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-color.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Верстка сайта с нуля</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+
+<!-- Поиск который перебрасывает сразу на страницу с помощью списка-->
+			<div class="searchable">
+			    <input type="text" placeholder="Искать здесь..."  onkeyup="filterFunction(this,event)">
+			    <ul>
+			    	<li><a href="organize1.html">Эволюция веб</a></li>
+			    	<li><a href="organize6.html">Введение в вёрстку</a></li>
+			    	<li><a href="organize2.html">Конструктор</a></li>
+			    	<li><a href="organize3.html">Сублим текст</a></li>
+			    	<li><a href="organize4.html">Плагины</a></li>
+			    	<li><a href="organize5.html">Файлы создание</a></li>
+			    	<li><a href="organize7.html">Картинки папка</a></li>
+			    	<li><a href="organize8.html">Адаптив</a></li>
+			    	<li><a href="html-type-sites.html">Виды сайтов</a></li>
+			    	<li><a href="html-process-dev.html">Разработка</a></li>
+			    	<li><a href="html-life-cycle.html">Цикл жизнь</a></li>
+			    	<li><a href="html-types-layout.html">Макет виды</a></li>
+			    	<li><a href="html-navigation.html">Навигация меню nav</a></li>
+			    	<li><a href="html-main-elements.html">Основные элементы main footer</a></li>
+			    	<li><a href="html-structure-html.html">Структура HTML head body</a></li>
+			    	<li><a href="html-paragraph.html">Текст параграф p</a></li>
+			    	<li><a href="html-text-formatting.html">Текст форматирование</a></li>
+			    	<li><a href="html-comments.html">Комментарии</a></li>
+			    	<li><a href="html-heading.html">Заголовки h1 h2 h3</a></li>
+			    	<li><a href="html-attributes.html">Атрибуты align width</a></li>
+			    	<li><a href="html-img.html">Картинки img </a></li>
+			    	<li><a href="html-src.html">Ссылки a href</a></li>
+			    	<li><a href="html-ul-li.html">Списки нумерованный маркированный</a></li>
+			    	<li><a href="html-table.html">Таблицы строки столбцы</a></li>
+			    	<li><a href="html-form-input.html">Формы кнопки отправка</a></li>
+			    	<li><a href="html-color.html">Цвет цвета</a></li>
+			    	<li><a href="html-model-content.html">Модели контента</a></li>
+			    	<li><a href="html-structure-html5.html">Структура HTML5 разметка</a></li>
+			    	<li><a href="html-audio.html">Аудио звук погромче где звук ёпта</a></li>
+			    	<li><a href="html-video.html">Видео плэй</a></li>
+			    	<li><a href="html-svg.html">Вектор svg качество</a></li>
+			    	<li><a href="html-progress.html">Progress загрузка</a></li>
+			    	<li><a href="style-type-css.html">Основы CSS база</a></li>
+			    	<li><a href="style-block-model.html">Блочная модель block</a></li>
+			    	<li><a href="style-block-inline.html">Inline-block блочно-строчная</a></li>
+			    	<li><a href="style-position.html">Позиционирование position</a></li>
+			    	<li><a href="style-text.html">Тест работа с текстом p</a></li>
+			    	<li><a href="style-font.html">Шрифт font</a></li>
+			    	<li><a href="style-link.html">a href css</a></li>
+			    	<li><a href="style-table.html">Table Css таблица</a></li>
+			    	<li><a href="style-list.html">Списки ol ul li </a></li>
+			    	<li><a href="style-background.html">Фон background</a></li>
+			    	<li><a href="style-border.html">Рамки border</a></li>
+			    	<li><a href="style-content.html">Контент content</a></li>
+			    	<li><a href="style-color.html">Цвет CSS color</a></li>
+			    </ul>
+			</div>
+		</div>
+
+		<!-- Навигация -->
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#list">Содержание</a></li>
+          <li><a href="organize.html">Подготовка</a></li>
+          <li><a href="html-menu.html">Введение в Html</a></li>
+          <li><a href="style-menu.html">Основы Css</a></li>
+          <li><a href="task.html">Задание</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+      </nav>
+	</header>
+	
+
+	<main>
+		<section class="top-slide">
+			<div class="top-container">
+				<div><h2>Вёрстка сайта </h2></div>
+				<div><h2>с нуля</h2></div>
+				<div><h2>для начинающих</h2></div>
+				<div><p>В этом учебнике мы научим тебя создавать</p></div>
+				<div><p>простые сайты с нуля при этом,</p></div>
+				<div><p>ты можете вообще ничего не знать о вёрстке</p></div>
+			</div>
+		</section>
+
+
+		<section class="dialogue-with-you inv">
+			<div class="dialogue-text">
+				<h2>Вёрстка</h2><br>
+				<p>Когда ты слышишь это слово у тебя сразу появляется мнение, что ты ничего не знаешь о ней? Ты думаешь это тяжело? И то, что у тебя ничего не получится?</p>
+			</div>
+			<img src="img/index/man-sad.png"  alt="">
+		</section>
+
+		<section class="dialogue-with-you">
+			<img src="img/index/man-book.png" alt="">
+			<div class="dialogue-text">
+				<h2>Помощь</h2><br>
+				<p>Видя перед собой непонятные буквы и наборы цифр ты сразу же идёшь гуглить их, но всё равно не поняв, что это такое, ты оставляешь это дело на потом. Но возвращаясь к этому снова ты испытываешь те же проблемы?</p>
+			</div>
+		</section>
+
+		<section class="dialogue-with-you inv">
+			<div class="dialogue-text">
+				<h2>Данный учебник</h2><br>
+				<p>Поможет тебе понять, что из себя представляет html и css. Также после того, как ты пройдешь все уроки, у тебя будет возможность пройти тест и закрепить свои знания, а в конце тебя ждёт реальный psd-макет, сверстав который, ты поймешь как устроена вёрстка.</p>
+			</div>
+			<img src="img/index/man-qts.png" alt="">
+		</section>
+
+
+		<section class="content-shell" id="list">
+			<div class="content-list">
+			<h2 class="list-name">Содержание учебника</h2><br>
+				<ul>
+					<h2 class="list-title">Раздел 1. Подготовка</h2>
+					<li><a href="organize6.html">Введение в html, css и js</a></li>
+					<li><a href="organize1.html">Эволюция Веб разработки</a></li>
+					<li><a href="organize2.html">Может лучше пользоваться конструктором?</a></li>
+					<li><a href="organize3.html">Sublime text - история, опыт использования</a></li>
+					<li><a href="organize4.html">Установка плагинов на Sublime text 3</a></li>
+					<li><a href="organize5.html">Создание файлов для работы с html,css</a></li>
+					<li><a href="organize7.html">Папка с картинками</a></li>
+					<li><a href="organize8.html">Адаптивность и кроссбраузерность в верстке</a></li>
+				</ul>
+				<ul>
+					<h2 class="list-title">Раздел 2. Обучение HTML</h2>
+					<li><a href="html-type-sites.html">Виды сайтов</a></li>
+					<li><a href="html-process-dev.html">Процесс разработки сайтов в веб</a></li>
+					<li><a href="html-life-cycle.html">Жизненный цикл построения сайтов</a></li>
+					<li><a href="html-types-layout.html">Виды макетов и их описание</a></li>
+					<li><a href="html-main-elements.html">Основные элементы html страницы</a></li>
+					<li class="list-bias"><a href="html-structure-html.html">Основная структура HTML</a></li>
+					<li><a href="html-navigation.html">Навигация по сайту</a></li>
+					<li class="list-bias"><a href="html-comments.html">Комментарии</a></li>
+					<li><a href="html-paragraph.html">Параграфы, текста</a></li>
+					<li><a href="html-text-formatting.html">Форматирование текста</a></li>
+					<li class="list-bias"><a href="html-heading.html">Заголовки</a></li>
+					<li class="list-bias"><a href="html-attributes.html">Атрибуты</a></li>
+					<li class="list-bias"><a href="html-img.html">Картинки</a></li>
+					<li class="list-bias"><a href="html-src.html">Ссылки</a></li>
+					<li class="list-bias"><a href="html-ul-li.html">Списки</a></li>
+					<li class="list-bias"><a href="html-table.html">Таблицы</a></li>
+					<li class="list-bias"><a href="html-form-input.html">Формы, кнопки</a></li>
+					<li class="list-bias"><a href="html-color.html">Цвет</a></li>
+					<li><a href="html-model-content.html">Модели контента</a></li>
+					<li><a href="html-structure-html5.html">Основные элементы HTML5</a></li>
+					<li class="list-bias"><a href="html-audio.html">Элемент Audio</a></li>
+					<li class="list-bias"><a href="html-video.html">Элемент Video</a></li>
+					<li class="list-bias"><a href="html-svg.html">Работа с графикой SVG</a></li>
+					<li class="list-bias"><a href="html-progress.html">Элемент progress</a></li>
+				</ul>
+				<ul>
+					<h2 class="list-title">Раздел 3. Уроки CSS</h2>
+					<li><a href="style-type-css.htmlp">Основы CSS</a></li>
+					<li class="list-bias"><a href="style-block-model.html">СSS блочная модель</a></li>
+					<li class="list-bias"><a href="style-block-inline.html">Блочные и строчные элементы</a></li>
+					<li><a href="style-position.html">Позиционирование</a></li>
+					<li class="list-bias"><a href="style-text.html">Оформление текста</a></li>
+					<li class="list-bias"><a href="style-font.html">Интеграция шрифтов и их применение</a></li>
+					<li class="list-bias"><a href="style-link.html">Стилизация ссылок с помощью CSS</a></li>
+					<li class="list-bias"><a href="style-table.html">Изменение внешнего вида таблиц</a></li>
+					<li class="list-bias"><a href="style-list.html">Списки и их оформление</a></li>
+					<li class="list-bias"><a href="style-background.html">Как сделать красивый фон?</a></li>
+					<li class="list-bias"><a href="style-border.html">Рамки и их стили</a></li>
+					<li class="list-bias"><a href="style-content.html">Content</a></li>
+					<li class="list-bias"><a href="style-color.html">Разновидности цветов в мире CSS</a></li>
+				</ul>
+			</div>
+		</section>
+
+
+
+
+
+	</main>
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<!-- подключение jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+<!-- скрипт для поиска -->
+<script src="js/search-work.js"></script>	
+<!-- скрипт для иконочного шрифта -->
+<script src="js/font/all.min.js"></script>
+<!-- скрипт для адаптивного меню -->
+<script src="js/1.js"></script>	
+</body>
+</html>

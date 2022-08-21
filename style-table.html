@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS-таблицы</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+        <!-- Навигация -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="organize.html">Подготовка</a></li>
+                <li><a href="html-menu.html">Введение в Html</a></li>
+                <li><a href="style-menu.html">Основы Css</a></li>
+                <li><a href="task.html">Задание</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="note.html">Блокнот</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+
+	<main class="html-lesson">
+            <div class="css-bg">
+                <div class="html-main">
+		<h2>CSS-таблицы</h2>
+	<div class="about-content">
+	<h4>Содержание:</h4>
+	<ol>
+		<li><a href="">Границы таблицы border</a></li>
+		<li><a href="">Как задать ширину и высоту таблицы</a></li>
+		<li><a href="">Как задать фон таблицы</a></li>
+		<li><a href="">Столбцы таблицы</a></li>
+		<li><a href="">Как добавить таблице заголовок</a></li>
+		<li><a href="">Как убрать промежуток между рамками ячеек</a></li>
+		<li><a href="">Как увеличить промежуток между рамками ячеек</a></li>
+		<li><a href="">Как скрыть пустые ячейки таблицы</a></li>
+		<li><a href="">Компоновка макета таблицы с помощью свойства table-layout</a></li>
+	</ol></div>
+		<h3>Границы таблицы border</h3>
+	<p>Таблица и ячейки внутри неё по-умолчанию отображаются в браузере без видимых границ. Границы таблицы задаются свойством border:</p>
+	<div class="code"><p><code>
+		table {<br>
+			border-collapse: collapse; /*убираем пустые промежутки между ячейками*/<br>
+			border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/<br>
+		}
+	</code></p></div>
+	<p>Границы ячеек заголовка каждого столбца задаются для элемента th:</p>
+	<div class="code"><p><code>
+		th {border: 1px solid grey;}
+	</code></p></div>
+	<p>Границы ячеек тела таблицы задаются для элемента td:</p>
+	<div class="code"><p><code>
+		td {border: 1px solid grey;}
+	</code></p></div>
+	<p>Толщина рамок соседних ячеек не удваивается, поэтому задать границы для всей таблицы можно следующим способом:</p>
+	<div class="code"><p><code>
+		th, td {border: 1px solid grey;}
+	</code></p></div>
+	<p>Внешнюю границу таблицы можно выделить, задав ей увеличенную ширину:</p>
+		table {border: 3px solid grey;}
+	<p>Границы можно задавать частично:</p>
+	<div class="code"><p><code>
+		/* устанавливаем для таблицы внешнюю границу серого цвета толщиной 3px */
+		table {border-top: 3px solid grey; } <br>
+		/* задаём для ячейки тела таблицы границу серого цвета толщиной 1px */
+		td {border-bottom: 1px solid grey;}
+	</code></p></div>
+	<p>Подробнее о свойстве border вы можете прочитать здесь.</p>
+		<h3>Как задать ширину и высоту таблицы</h3>
+	<p>По умолчанию <b>ширина и высота таблицы</b> определяется содержимым её ячеек. Если ширина не задана, то она будет равна ширине самого широкого ряда (строки).</p>
+	<p><b>Ширина таблицы и столбцов</b> задаётся с помощью свойства width. Если для таблицы задано table {width: 100%;}, то ширина таблицы будет равна ширине блока-контейнера, в котором она находится.</p>
+	<p>Ширину таблицы и столбцов обычно задают в px или %, например:</p>
+	<div class="code"><p><code>
+		table {width: 600px;} <br>
+		th {width: 20%;} <br>
+		td:first-child {width: 30%;}
+	</code></p></div>
+	<p><b>Высота таблицы</b> не задается. Высотой рядов таблицы можно управлять, добавив верхний и нижний padding для элементов <td> и <th>. Фиксировать высоту с помощью свойства height не рекомендуется.</p>
+	<div class="code"><p><code>
+		th, td {padding: 10px 15px;}
+	</code></p></div>
+		<h3>Как задать фон таблицы</h3>
+	<p>о умолчанию фон таблицы и ячеек прозрачный. Если страница или блок, содержащие таблицу, имеют фон, то он будет просвечиваться сквозь таблицу. Если фон задан и для таблицы и для ячеек, то в местах наложения фона таблицы и ячеек будет виден фон только ячеек. В качестве фона для таблицы в целом и её ячеек могут выступать:<br>
+	- заливка сплошным цветом,<br>
+	- градиентная заливка,<br>
+	- фоновое изображение.</p>
+		<h3>Столбцы таблицы</h3>
+	<p>Модель CSS таблиц ориентирована в основном на строки (ряды), формируемые с помощью тега &lt;tr&gt;. На практике бывают случаи, когда необходимо специальное форматирование столбцов, которое возможно следующими способами:</p>
+	<p>с помощью тега <col> можно задать фон для любого количества столбцов;</p>
+	<p>с помощью селектора table td:first-child, table td:last-child можно задать стили для первого или последнего столбца таблицы (за исключением первой ячейки заголовка таблицы);</p>
+	<p>с помощью селектора table td:nth-child(правило отбора столбцов) можно задать стили для любых столбцов таблицы.</p>
+	<p>Подробнее про тег <col> вы можете прочитать здесь. <br> Подробнее про CSS-селекторы вы сможете прочитать здесь.</p>
+		<h3>Как добавить таблице заголовок</h3>
+	<p>Добавить заголовок в таблицу можно с помощью тега &lt;caption&gt;., а с помощью свойства caption-side его можно поместить перед таблицей или под ней. Для горизонтального выравнивания текста заголовка применяется свойство text-align. Наследуется.</p>
+	<table class="tb">
+		<tr>
+			<th colspan="2" align="center">caption-side</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>top</td>
+			<td>Заголовок таблицы располагается над таблицей. Значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>bottom</td>
+			<td>Располагает заголовок под таблицей.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<div class="code"><p><code>
+		&lt;table&gt;<br><br>
+   			&lt;caption&gt;Таблица № 1&lt;/caption&gt;<br><br>
+      		&lt;tr&gt;<br><br>
+         		&lt;th&gt;Company&lt;/th&gt;<br><br>
+         		&lt;th&gt;Q1&lt;/th&gt;<br><br>
+         		&lt;th&gt;Q2&lt;/th&gt;<br><br>
+         		&lt;th&gt;Q3&lt;/th&gt;<br><br>
+         		&lt;th&gt;Q4&lt;/th&gt;<br><br>
+      		<&lt;tr&gt;<br><br>
+		...<br><br>
+		&lt;table&gt;<br><br>
+	</code></p></div>
+	<div class="code"><p><code>
+		caption {<br>
+			caption-side: bottom; <br>
+			text-align: right; <br>
+			padding: 10px 0; <br>
+			font-size: 14px; <br>
+		}
+	</code></p></div>
+	<table class="tb">
+   <caption>Таблица № 1</caption>
+      <tr>
+         <th>Company</th>
+         <th>Q1</th>
+         <th>Q2</th>
+         <th>Q3</th>
+         <th>Q4</th>
+      </tr>
+      <tr>
+      	<th>Microsoft</th>
+      	<th>78.29</th>
+      	<th>15.26</th>
+      	<th>42.58</th>
+      	<th>42.6</th>
+      </tr>
+      <tr>
+      	<th>BMV</th>
+      	<th>20.3</th>
+      	<th>80.3</th>
+      	<th>85.14</th>
+      	<th>40.2</th>
+      </tr>
+	</table>
+		<h3>Как убрать промежуток между рамками ячеек</h3>
+	<p>Рамки ячеек таблицы по умолчанию разделены небольшим промежутком. Если задать для таблицы border-collapse: collapse, то промежуток уберётся. Свойство наследуется.</p>
+	<table class="tb">
+		<tr >
+			<th colspan="2" align="center">border-collapse</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>separate</td>
+			<td>Рамки ячеек располагаются раздельно.</td>
+		</tr>
+		<tr>
+			<td>collapse</td>
+			<td>Рамки ячеек сливаются в одну, а промежутки между рамками убираются.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+		<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">border-collapse</span>: collapse;</p></div>
+		<h3>Как увеличить промежуток между рамками ячеек</h3>
+	<p>С помощью свойства border-spacing можно менять расстояние между рамками ячеек. Данное свойство применяется к таблице в целом. Наследуется.</p>
+	<table class="tb">
+		<tr >
+			<th colspan="2" align="center">border-spacing</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><длина><br><длина></td>
+			<td>Добавляет промежутки между рамками как по вертикали, так и по горизонтали. Если заданы две длины, то первая всегда определяет горизонтальный промежуток, а вторая — вертикальный.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<div class="code"><p><code>
+		table {border-collapse: separate; border-spacing: 10px 20px;} <br>
+		table {border-collapse: separate; border-spacing: 10px;}
+	</code></p></div>
+		<h3>Как скрыть пустые ячейки таблицы</h3>
+	<p>Свойство empty-cells скрывает или показывает пустые ячейки. Действует только на ячейки, которые не содержат какой-либо контент. Если для ячейки задан фон, а для таблицы задано table {border-collapse: collapse;}, то ячейка не будет скрыта. Наследуется.</p>
+	<table class="tb">
+		<tr >
+			<th colspan="2" align="center">empty-cells</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>show</td>
+			<td>Рамка и фон пустой ячейки будут отрисовываться так же, как для ячейки таблицы, имеющей содержимое.</td>
+		</tr>
+		<tr>
+			<td>hide</td>
+			<td>Если все ячейки строки пусты, то вся строка отображается так, если бы было задано значение display: none.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<div class="code"><p><code>
+		table {<br>
+			border: 1px solid #69c;<br>
+			border-collapse: separate;<br>
+			empty-cells: hide;<br>
+		} <br>
+			th, td {border: 2px solid #69c;}<br>
+	</code></p></div>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">border-collapse</span>: collapse;</p></div>
+		<h3>Компоновка макета таблицы с помощью свойства table-layout</h3>
+	<p>Компоновка макета таблицы определяется одним из двух подходов: фиксированный макет или автоматический макет. Под компоновкой в данном случае подразумевается как распределяется ширина таблицы между шириной ячеек. Свойство не наследуется.</p>
+	<table class="tb">
+		<tr >
+			<th colspan="2" align="center">table-layout</th>
+		</tr>
+		<tr>
+			<td>Значения:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>auto</td>
+			<td>Значение по умолчанию. Ширина макета таблицы определяется шириной её содержимого с учетом значений свойств padding-left, padding-right, border-left width плюс одна ширина border-right последней ячейки в ряду, или заданной шириной ячеек и толщиной рамки. Если ширина ячеек не задана явно, они могут быть разной ширины.</td>
+		</tr>
+		<tr>
+			<td>fixed</td>
+			<td>Свойство сработает только в том случае, если для таблицы задана ширина. Ширина ячеек будет одинаковой, а содержимое ячеек, которое не помещается в ячейку, будет наползать под содержимое соседней ячейки.</td>
+		</tr>
+		<tr>
+			<td>initial</td>
+			<td>Устанавливает значение свойства в значение по умолчанию.</td>
+		</tr>
+		<tr>
+			<td>inherit</td>
+			<td>Наследует значение свойства от родительского элемента.</td>
+		</tr>
+	</table>
+	<h4>Синтаксис</h4>
+	<div class="code"><p><code>
+		<span style="color: red">table</span>: {table-layout: fixed;};</p></div>
+	<div class="container-btn">
+                      <a href="style-link.html"><button class="next-btn lorange">Предыдущий урок</button></a>
+                      <a href="style-list.html"><button class="next-btn lorange">Следующий урок</button></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+</body>
+</html>

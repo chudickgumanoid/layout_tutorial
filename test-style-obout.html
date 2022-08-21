@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тест по CSS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+		<!-- Навигация -->
+		<nav class="menu">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="organize.html">Подготовка</a></li>
+				<li><a href="html-menu.html">Введение в Html</a></li>
+				<li><a href="style-menu.html">Основы Css</a></li>
+				<li><a href="task.html">Задание</a></li>
+				<li><a href="contact.html">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section class="about-html" style="margin-bottom: 50px;">
+		<center><h1 style="margin: 50px 0 150px 0; font-size: 27px;">CSS-тест</h1></center>
+		
+		<div id="deadline-message" class="deadline-message">
+  			Время вышло!
+		</div>
+		<div id="countdown" class="countdown" style="margin-top: -100px;">
+			<h4 class="countdown-title">Таймер</h4><hr>
+  			<div class="countdown-number">
+    				<span class="hours countdown-time"></span>
+  			</div>
+  			<div class="countdown-number">
+    				<span class="minutes countdown-time"></span>
+  			</div>
+  			<div class="countdown-number">
+    				<span class="seconds countdown-time"></span>
+  			</div>
+		</div>
+	<form name="myTest" action="javascript:check();">
+<div class="myTest" id="dead">
+<div class="test">
+	<h2>1. Свойство background-clip</h2><br>
+	<div class="answer"><p><input name="q1" value="a" type="radio"> a: Свойство устанавливает размер фоновых изображений.</p><br><br></div>
+
+	<div class="answer"><p><input name="q1" value="a" type="radio"> b: Свойство указывает область расположения фона для элементов, которые выводятся на экране как единый блок.</p><br><br></div>
+
+	<div class="answer"><p><input name="q1" value="b" type="radio"> c: Свойство определяет область рисования фона.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>2. Не посещенная ссылкa</h2><br>
+	<div class="answer"><p><input name="q2" value="a" type="radio"> a: a:visited</p><br><br></div>
+
+	<div class="answer"><p><input name="q2" value="a" type="radio"> b: a:active</p><br><br></div>
+
+	<div class="answer"><p><input name="q2" value="b" type="radio"> c: a:link</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>3. Свойство text-indent</h2><br>
+	<div class="answer"><p><input name="q3" value="a" type="radio"> a: Свойство определяет дополнительный интервал, или трекинг, между смежными типографскими символами.</p><br><br></div>
+
+	<div class="answer"><p><input name="q3" value="b" type="radio"> b: Свойство задает отступ, применяемый к строкам встроенного содержимого в блоке.</p><br><br></div>
+
+	<div class="answer"><p><input name="q3" value="a" type="radio"> c: Свойство определяет дополнительный интервал между словами.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>4. Свойство list-style-position</h2><br>
+	<div class="answer"><p><input name="q4" value="b" type="radio"> a: Cвойство предоставляет возможность располагать маркер вне или внутри содержимого элемента списка.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q4" value="a" type="radio"> b: Свойство указывает область расположения фона для элементов, которые выводятся на экране как единый блок.</p><br><br></div>
+
+	<div class="answer"><p><input name="q4" value="a" type="radio"> c: Cвойства можно менять расстояние между рамками ячеек.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>5. Не нажатая ссылкa</h2><br>
+	<div class="answer"><p><input name="q5" value="a" type="radio"> a: a:link</p><br><br></div>
+
+	<div class="answer"><p><input name="q5" value="a" type="radio"> b: a:active</p><br><br></div>
+
+	<div class="answer"><p><input name="q5" value="b" type="radio"> c: a:hover</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>6. Cвойство background-position</h2><br>
+	<div class="answer"><p><input name="q6" value="a" type="radio"> a: Свойство указывает, является ли фоновое изображение фиксированными относительно области просмотра или прокручивается вместе с элементом или его содержимым.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q6" value="b" type="radio"> b: Cвойство указывает их начальное положение (после любого изменения размера) в соответствующей области расположения фона.</p><br><br></div>
+
+	<div class="answer"><p><input name="q6" value="a" type="radio"> c: Свойство определяет область рисования фона.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>7. Свойство border-color</h2><br>
+	<div class="answer"><p><input name="q7" value="b" type="radio"> a: Свойство задаёт цвет рамок всех сторон одновременно.</p><br><br></div>
+
+	<div class="answer"><p><input name="q7" value="a" type="radio"> b: Свойство устанавливает цвет фона элемента.</p><br><br></div>
+
+	<div class="answer"><p><input name="q7" value="a" type="radio"> c: Свойство задаёт цвет шрифта с помощью различных систем цветопередачи.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>8. Посещенная ссылкa</h2><br>
+	<div class="answer"><p><input name="q8" value="a" type="radio"> a: a:link</p><br><br></div>
+
+	<div class="answer"><p><input name="q8" value="b" type="radio"> b: a:visited</p><br><br></div>
+
+	<div class="answer"><p><input name="q8" value="a" type="radio"> c: a:active</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>9. Cвойства border-spacing</h2><br>
+	<div class="answer"><p><input name="q9" value="b" type="radio"> a: Cвойства можно менять расстояние между рамками ячеек.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q9" value="a" type="radio"> b: Свойство скрывает или показывает пустые ячейки.</p><br><br></div>
+
+	<div class="answer"><p><input name="q9" value="a" type="radio"> c: Cвойство предоставляет возможность располагать маркер вне или внутри содержимого элемента списка.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>10. Свойство font-family</h2><br>
+	<div class="answer"><p><input name="q10" value="b" type="radio"> a: Свойство используется для выбора начертания шрифта.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q10" value="a" type="radio"> b: Свойство выбирает нормальное, сжатое или расширенное начертание символа из семейства шрифтов.</p><br><br></div>
+
+	<div class="answer"><p><input name="q10" value="a" type="radio"> c: Свойство позволяет выбрать стиль начертания для шрифта.</p><br><br></div>
+</div>
+
+
+<div class="test">
+	<h2>11. Свойство color</h2><br>
+	<div class="answer"><p><input name="q11" value="b" type="radio"> a: Свойство задаёт цвет шрифта с помощью различных систем цветопередачи.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q11" value="a" type="radio"> b: Свойство устанавливает цвет фона элемента.</p><br><br></div>
+
+	<div class="answer"><p><input name="q11" value="a" type="radio"> c: Свойство задаёт цвет рамок всех сторон одновременно.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>12. Свойство font-size</h2><br>
+	<div class="answer"><p><input name="q12" value="a" type="radio"> a: Свойство задаёт насыщенность шрифта.</p><br><br></div>
+
+	<div class="answer"><p><input name="q12" value="b" type="radio"> b: Свойство указывает желаемую высоту глифов из шрифта.</p><br><br></div>
+
+	<div class="answer"><p><input name="q12" value="a" type="radio"> c: Свойство определяет, разрешено ли пользовательским агентам синтезировать полужирное или наклонное начертание шрифтов, когда они отсутствуют в семействе шрифтов.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>13. Свойство list-style-position</h2><br>
+	<div class="answer"><p><input name="q13" value="b" type="radio"> a: Cвойство предоставляет возможность располагать маркер вне или внутри содержимого элемента списка.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q13" value="a" type="radio"> b: Свойство указывает область расположения фона для элементов, которые выводятся на экране как единый блок.</p><br><br></div>
+
+	<div class="answer"><p><input name="q13" value="a" type="radio"> c: Cвойства можно менять расстояние между рамками ячеек.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>14. Свойство background-size</h2><br>
+	<div class="answer"><p><input name="q14" value="a" type="radio"> a: Свойство указывает область расположения фона для элементов, которые выводятся на экране как единый блок.</p><br><br></div>
+
+	<div class="answer"><p><input name="q14" value="a" type="radio"> b: Свойство определяет область рисования фона.</p><br><br></div>
+
+	<div class="answer"><p><input name="q14" value="b" type="radio"> c: Свойство устанавливает размер фоновых изображений.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>15. Цвета модели RGBA</h2><br>
+	<div class="answer"><p><input name="q15" value="a" type="radio"> a: Цвета RGB не интуитивно понятны. CSS3 добавляет числовые цвета hue-saturation-lightness (HSL) в дополнение к числовым цветам RGB.</p><br><br></div>
+
+	<div class="answer"><p><input name="q15" value="b" type="radio"> b: Цветовая модель RGB расширена в этой спецификации, чтобы включить alpha, которая управляющая непрозрачностью цвета.</p><br><br></div>
+
+	<div class="answer"><p><input name="q15" value="a" type="radio"> c: CSS1 и CSS2 определили начальное значение свойства border-color как значение свойства color, но не определили соответствующее ключевое слово.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>16. Добавить заголовок в таблицу можно с помощью кокого тега.</h2><br>
+	<div class="answer"><p><input name="q16" value="b" type="radio"> a: caption</p><br><br></div>
+	
+	<div class="answer"><p><input name="q16" value="a" type="radio"> b: center</p><br><br></div>
+
+	<div class="answer"><p><input name="q16" value="a" type="radio"> c: cover</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>17. Свойство empty-cells</h2><br>
+	<div class="answer"><p><input name="q17" value="a" type="radio"> a: Свойство показывает пустые ячейки.</p><br><br></div>
+
+	<div class="answer"><p><input name="q17" value="a" type="radio"> b: Свойство скрывает пустые ячейки.</p><br><br></div>
+
+	<div class="answer"><p><input name="q17" value="b" type="radio"> c: Свойство скрывает или показывает пустые ячейки.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>18. Свойство list-style-type</h2><br>
+	<div class="answer"><p><input name="q18" value="a" type="radio"> a: Свойство изменяет типа маркера для маркированного и нумерованного списков. Наследуется.</p><br><br></div>
+
+	<div class="answer"><p><input name="q18" value="b" type="radio"> b: Свойство изменяет типа маркера или удаляет маркер для маркированного и нумерованного списков. Наследуется.</p><br><br></div>
+
+	<div class="answer"><p><input name="q18" value="a" type="radio"> c: Свойство изменяет типа маркера или удаляет маркер для маркированного и нумерованного списков. Не наследуется.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>19. Cвойство background-position</h2><br>
+	<div class="answer"><p><input name="q19" value="a" type="radio"> a: Свойство указывает, является ли фоновое изображение фиксированными относительно области просмотра или прокручивается вместе с элементом или его содержимым.</p><br><br></div>
+	
+	<div class="answer"><p><input name="q9" value="b" type="radio"> b: Cвойство указывает их начальное положение (после любого изменения размера) в соответствующей области расположения фона.</p><br><br></div>
+
+	<div class="answer"><p><input name="q19" value="a" type="radio"> c: Свойство определяет область рисования фона.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>20. Какой из этих перечисленных ниже лишний?</h2><br>
+	<div class="answer"><p><input name="q20" value="a" type="radio"> a: border-box</p><br><br></div>
+
+	<div class="answer"><p><input name="q20" value="a" type="radio"> b: padding-box</p><br><br></div>
+
+	<div class="answer"><p><input name="q20" value="b" type="radio"> c: margin-box</p><br><br></div>
+</div>
+
+
+<div class="test">
+	<h2>21. Функция attr()</h2><br>
+	<div class="answer"><p><input name="q21" value="a" type="radio"> a: Позволяет убрать любое значение атрибута.</p><br><br></div>
+
+	<div class="answer"><p><input name="q21" value="a" type="radio"> b: Позволяет добавить любое значение ширены.</p><br><br></div>
+
+	<div class="answer"><p><input name="q21" value="b" type="radio"> c: Позволяет добавить любое значение атрибута.</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>22. С помощью каких значений  можно генерировать открывающие и закрывающие кавычки.</h2><br>
+	<div class="answer"><p><input name="q22" value="a" type="radio"> a: close-quote</p><br><br></div>
+
+	<div class="answer"><p><input name="q22" value="a" type="radio"> b: open-quote</p><br><br></div>
+
+	<div class="answer"><p><input name="q22" value="b" type="radio"> c: open-quote и close-quote</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>23. Какой из этих перечисленных ниже лишний?</h2><br>
+	<div class="answer"><p><input name="q23" value="b" type="radio"> a: repeat-z</p><br><br></div>
+	
+	<div class="answer"><p><input name="q23" value="a" type="radio"> b: repeat-x</p><br><br></div>
+
+	<div class="answer"><p><input name="q23" value="a" type="radio"> c: repeat</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>24. Не нажатая ссылкa</h2><br>
+	<div class="answer"><p><input name="q24" value="a" type="radio"> a: a:link</p><br><br></div>
+
+	<div class="answer"><p><input name="q24" value="a" type="radio"> b: a:active</p><br><br></div>
+
+	<div class="answer"><p><input name="q24" value="b" type="radio"> c: a:hover</p><br><br></div>
+</div>
+
+<div class="test">
+	<h2>25. Свойство font-size</h2><br>
+	<div class="answer"><p><input name="q25" value="a" type="radio"> a: Свойство задаёт насыщенность шрифта.</p><br><br></div>
+
+	<div class="answer"><p><input name="q25" value="b" type="radio"> b: Свойство указывает желаемую высоту глифов из шрифта.</p><br><br></div>
+
+	<div class="answer"><p><input name="q25" value="a" type="radio"> c: Свойство определяет, разрешено ли пользовательским агентам синтезировать полужирное или наклонное начертание шрифтов, когда они отсутствуют в семействе шрифтов.</p><br><br></div>
+</div>
+
+</div>
+
+<div class="button-menu">
+		<input type="submit" value="Завершить тест" class="button-sumbit btn-html"></div>
+</div>
+	<div class="button-dead" id="button-dead">
+		<input type="submit" value="Завершить тест" class="button-sumbit btn-html" id="button-sumbit btn-html"></div>
+</form>
+		</section>
+	</div>
+	</main>
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+<script src="js/test-css.js"></script>
+<script src="js/timer.js"></script>
+</body>
+</html>

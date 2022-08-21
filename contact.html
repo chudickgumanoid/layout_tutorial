@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Наши контакты</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+		<!-- Навигация -->
+		<nav class="menu">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="organize.html">Подготовка</a></li>
+				<li><a href="html-menu.html">Введение в Html</a></li>
+				<li><a href="style-menu.html">Основы Css</a></li>
+				<li><a href="task.html">Задание</a></li>
+				<li><a href="contact.html">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+
+	<main class="contact">
+		<h2>Наше расположение:</h2>
+		<div id="map"></div>
+
+
+		<form class="form">
+			<h3 class="fotm_title">Напишите нам письмо</h3><br>
+
+			<div class="form_group">
+				<input class="form_input">
+				<label class="form_label">Имя</label>
+			</div>
+
+
+			<div class="form_group">
+				<input class="form_input">
+				<label class="form_label">E-mail</label>
+			</div>
+
+			<div class="form_group">
+				<textarea class="form_input"></textarea>
+				<label class="form_label">Сообщение</label>
+			</div>
+
+			<button class="form_button">Отправить</button>
+		</form>
+
+
+	</main>
+
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+
+<script>
+	// Initialize and add the map
+	function initMap() {
+	  // The location of Uluru
+	  var uluru = {lat: 49.7999654, lng: 73.095208};
+	  // The map, centered at Uluru
+	  var map = new google.maps.Map(
+	      document.getElementById('map'), {zoom: 14, center: uluru});
+	  // The marker, positioned at Uluru
+	  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD74faD7jJWovx2VDS5wEREwZnzCH7buKY&callback=initMap">
+    </script>
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>	
+</body>
+</html>

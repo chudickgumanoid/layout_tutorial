@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тест по HTML</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-adaptive.css">
+	<link rel="stylesheet" href="css/font/all.min.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo1.png" alt="Logo"></a>
+		</div>
+	
+	
+		<!-- Навигация -->
+		<nav class="menu">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="organize.html">Подготовка</a></li>
+				<li><a href="html-menu.html">Введение в Html</a></li>
+				<li><a href="style-menu.html">Основы Css</a></li>
+				<li><a href="task.html">Задание</a></li>
+				<li><a href="contact.html">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section class="about-html" style="margin-bottom: 50px;">
+		<center><h1 style="margin: 50px 0 150px 0; font-size: 27px;">HTML-тест</h1></center>
+		
+		<div id="deadline-message" class="deadline-message">
+  			Время вышло!
+		</div>
+		<div id="countdown" class="countdown" style="margin-top: -100px;">
+			<h4 class="countdown-title">Таймер</h4><hr>
+  			<div class="countdown-number">
+    				<span class="hours countdown-time"></span>
+  			</div>
+  			<div class="countdown-number">
+    				<span class="minutes countdown-time"></span>
+  			</div>
+  			<div class="countdown-number">
+    				<span class="seconds countdown-time"></span>
+  			</div>
+		</div>
+	<form name="myTest" action="javascript:check();">
+<div class="myTest" id="dead">
+<div class="test">
+	<h2>1. Для создания прямоугольника нужно прописать какие инструкции:</h2><br>
+	<label><div class="answer"><p><input name="q1" value="a" type="radio"> a: &lt;rect width="300" height="100" x="80" y="20" fill="green"&gt;</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q1" value="a" type="radio"> b: &lt;rect width="300" height="100" x="80" y="80" fill="green"&gt;</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q1" value="b" type="radio"> c: &lt;rect width="300" height="100" x="20" y="20" fill="green"&gt;</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>2. Подвалом сайта задается тегом?</h2><br>
+	<label><div class="answer"><p><input name="q2" value="a" type="radio"> a: Header</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q2" value="a" type="radio"> b: Nav</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q2" value="b" type="radio"> c: Footer</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>3. Как правильно прописывается комментарий?</h2><br>
+	<label><div class="answer"><p><input name="q3" value="b" type="radio"> a: &lt;!-- Тут находится текст вашего комментария --></p><br><br></div></label>
+	
+	<label><div class="answer"><p><input name="q3" value="a" type="radio"> b: <-- Тут находится текст вашего комментария --></p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q3" value="a" type="radio"> c: &lt;!- Тут находится текст вашего комментария -></p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>4. Article</h2><br>
+	<label><div class="answer"><p><input name="q4" value="a" type="radio"> a: Определяет блок сбоку от контента для размещения рубрик, ссылок на архив, меток и другой информации.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q4" value="a" type="radio"> b: Задаёт раздел документа, может применяться для блока новостей, контактной информации, глав текста, вкладок в диалоговом окне и др. Раздел обычно содержит заголовок</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q4" value="b" type="radio"> c: Данный тег задает содержание сайта вроде новости, статьи, записи блога, форума или др.</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>5. Bgcolor</h2><br>
+	<label><div class="answer"><p><input name="q5" value="a" type="radio"> a: Цвет рамки</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q5" value="b" type="radio"> b: Цвет фона</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q5" value="a" type="radio"> c: Цвет текста</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>6. &lt;img&gt; тега атрибут</h2><br>
+	<label><div class="answer"><p><input name="q6" value="b" type="radio"> a: src</p><br><br></div></label>
+	
+	<label><div class="answer"><p><input name="q6" value="a" type="radio"> b: href</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q6" value="a" type="radio"> c: link</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>7. В HTML используется сколько уровней заголовок.</h2><br>
+	<label><div class="answer"><p><input name="q7" value="a" type="radio"> a: 1-3</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q7" value="a" type="radio"> b: 1-9</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q7" value="b" type="radio"> c: 1-6</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>8. Атрибуты method определяет:</h2><br>
+	<label><div class="answer"><p><input name="q8" value="a" type="radio"> a: GET или POST</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q8" value="b" type="radio"> b: HTTP, GET или POST</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q8" value="a" type="radio"> c: HTTP</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>9. Секционирование</h2><br>
+	<label><div class="answer"><p><input name="q9" value="b" type="radio"> a: &lt;article&gt; , &lt;aside&gt; , &lt;nav&gt; , &lt;section&gt;</p><br><br></div></label>
+	
+	<label><div class="answer"><p><input name="q9" value="a" type="radio"> b: &lt;article&gt; , &lt;aside&gt;</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q9" value="a" type="radio"> c: &lt;aside&gt;, &lt;nav&gt; , &lt;section&gt;</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>10. Audio</h2><br>
+	<label><div class="answer"><p><input name="q10" value="a" type="radio"> a: Воспроизведения мульти файлов на веб-странице.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q10" value="a" type="radio"> b: Воспроизведения видео файлов на веб-странице.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q10" value="b" type="radio"> c: Воспроизведения аудио файлов на веб-странице.</p><br><br></div></label>
+</div>
+
+
+<div class="test">
+	<h2>11. &lt;h1 align="center"&gt;Заголовок первого уровня&lt;/h1&gt;</h2><br>
+	<label><div class="answer"><p><input name="q11" value="a" type="radio"> a: Выравнивает заголовок по левому краю.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q11" value="a" type="radio"> b: Выравнивает заголовок по правому краю.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q11" value="b" type="radio"> c: Выравнивает заголовок по центру.</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>12. Тег &lt;sup&gt;</h2><br>
+<label>	<div class="answer"><p><input name="q12" value="a" type="radio"> a: удаленный текст</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q12" value="a" type="radio"> b: полужирный текст</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q12" value="b" type="radio"> c: надстрочный текст</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>13. Нумерованный список начинается с какого тега.</h2><br>
+	<label><div class="answer"><p><input name="q13" value="b" type="radio"> a: ol</p><br><br></div></label>
+	
+	<label><div class="answer"><p><input name="q13" value="a" type="radio"> b: ul</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q13" value="a" type="radio"> c: li</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>14. Атрибут target</h2><br>
+	<label><div class="answer"><p><input name="q14" value="a" type="radio"> a: Атрибуты содержат дополнительную информацию об элементе или теге, также заменяют их.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q14" value="a" type="radio"> b: Атрибут служит для указания адреса, нажав на который, пользователь окажется на другой странице.</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q14" value="b" type="radio"> c: Атрибут указывает, где нужно открыть привязанный документ.</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>15. Для вывода кнопки какой из ниже перечисленных правильный?</h2><br>
+	<label><div class="answer"><p><input name="q15" value="a" type="radio"> a: &lt;input type = "radio" value = "Отправить"&gt;</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q15" value="b" type="radio"> b: &lt;input type = "submit" value = "Отправить"&gt;</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q15" value="a" type="radio"> c: &lt;input type = "Отправить" value = "submit"&gt;</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>16. SVG означает</h2><br>
+	<label><div class="answer"><p><input name="q16" value="b" type="radio"> a: S Scalable V Vector G Graphics</p><br><br></div></label>
+	
+	<label><div class="answer"><p><input name="q16" value="a" type="radio"> b: S Scaner V Vector G Graphics</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q16" value="a" type="radio"> c: S Scalable V Vector G Grid</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>17. Виды макетов</h2><br>
+	<label><div class="answer"><p><input name="q17" value="a" type="radio"> a: Фиксированный макет</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q17" value="a" type="radio"> b: Резиновый макет</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q17" value="b" type="radio"> c: Фиксированный макет и резиновый макет</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>18. Какой атрибут устанавливает альтернативный текст для области изображения.</h2><br>
+	<label><div class="answer"><p><input name="q18" value="a" type="radio"> a: placeholder</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q18" value="b" type="radio"> b: alt</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q18" value="a" type="radio"> c: value</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>19. Перенос строки осуществляется тегом</h2><br>
+	<label><div class="answer"><p><input name="q19" value="a" type="radio"> a: br</p><br><br></div></label>
+	
+<label>	<div class="answer"><p><input name="q9" value="b" type="radio"> b: p</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q19" value="a" type="radio"> c: a</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>20. Навигация у сайта бывают какими?</h2><br>
+	<label><div class="answer"><p><input name="q20" value="a" type="radio"> a: Навигация в левом столбце, в правом столбце, горизонтальная навигация
+</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q20" value="a" type="radio"> b: Навигация в левом столбце, в правом столбце, в трёх столбцах</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q20" value="b" type="radio"> c: Навигация в левом столбце, в правом столбце, в трёх столбцах, горизонтальная навигация</p><br><br></div></label>
+</div>
+
+
+<div class="test">
+	<h2>21. Строки таблицы определяются при помощи какого тега?</h2><br>
+	<label><div class="answer"><p><input name="q21" value="a" type="radio"> a: table</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q21" value="a" type="radio"> b: tr</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q21" value="b" type="radio"> c: td</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>22. Атрибут служит для указания адреса, нажав на который, пользователь окажется на другой странице.</h2><br>
+	<label><div class="answer"><p><input name="q22" value="a" type="radio"> a: rel</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q22" value="a" type="radio"> b: src</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q22" value="b" type="radio"> c: href</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>23. Цвета HTML выражаются в каких значениях?</h2><br>
+	<label><div class="answer"><p><input name="q23" value="b" type="radio"> a: Шестнадцатеричных</p><br><br></div></label>
+	
+	<label><div class="answer"><p><input name="q23" value="a" type="radio"> b: Двадцатизначных</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q23" value="a" type="radio"> c: Десятизначных</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>24. Заголовок документа</h2><br>
+<label>	<div class="answer"><p><input name="q24" value="a" type="radio"> a: html</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q24" value="a" type="radio"> b: body</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q24" value="b" type="radio"> c: head</p><br><br></div></label>
+</div>
+
+<div class="test">
+	<h2>25. При помощи какого атрибута, вы можете указывать границы вашей таблицы.</h2><br>
+	<label><div class="answer"><p><input name="q25" value="a" type="radio"> a: table</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q25" value="b" type="radio"> b: border</p><br><br></div></label>
+
+	<label><div class="answer"><p><input name="q25" value="a" type="radio"> c: bgcolor</p><br><br></div></label>
+</div>
+
+<div class="button-menu">
+		<input type="submit" value="Завершить тест" class="button-sumbit btn-html"></div>
+</div>
+	<div class="button-dead" id="button-dead">
+		<input type="submit" value="Завершить тест" class="button-sumbit btn-html" id="button-sumbit btn-html"></div>
+</form>
+		</section>
+	</div>
+	</main>
+
+
+	<footer>
+		<nav>
+			<a href="index.html">Главная</a>
+			<a href="glossrary.html">Глоссарий</a>
+			<a href="task.html">Задания</a>
+			<a href="contact.html">Контакты</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img src="img/logo1.png" alt="Logo"></a>
+		</div>
+		<div class="social">
+			<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA/videos"  target="_blank"><i class="fab fa-youtube" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://vk.com/zamanov_abylai" target="_blank"><i class="fab fa-vk" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.facebook.com/profile.php?id=100042100849246" target="_blank"><i class="fab fa-facebook" style="font-size: 50px; margin: 0 10px; "></i></a>
+			<a href=""><i class="fab fa-whatsapp" style="font-size: 50px; margin: 0 10px;"></i></a>
+			<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><i class="fab fa-instagram" style="font-size: 50px; margin: 0 10px;"></i></a>
+		</div><br><br>
+		<p>КГУ Карагандинский профессионально технический колледж</p>
+		<p>Руководитель: Абдрахманова Светлана Владимировна</p>
+		<p class="footer-bottom">© 2020 Obrazkov Alexandr & Zhamanov Abylai</p>
+	</footer>
+
+<script src="js/font/all.min.js"></script>
+<script src="js/1.js"></script>
+<script src="js/test.js"></script>
+<script src="js/timer.js"></script>
+</body>
+</html>
